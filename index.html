@@ -3,579 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Solite.❤️ X STUDIO MOD</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>STUDIO MOD</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-
-background:linear-gradient(180deg,#0d1117,#111827,#0d1117);
-
-color:#fff;
-
-overflow-x:hidden;
-
+    background:#111;
+    color:#fff;
+    padding:20px;
 }
 
 .container{
-
-max-width:500px;
-
-margin:auto;
-
-padding:20px;
-
+    max-width:500px;
+    margin:auto;
 }
 
 .header{
-
-text-align:center;
-
-animation:fadeDown .8s;
-
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .avatar{
-
-width:130px;
-
-height:130px;
-
-border-radius:50%;
-
-border:4px solid #00d4ff;
-
-box-shadow:0 0 25px #00d4ff;
-
-object-fit:cover;
-
-transition:.3s;
-
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #00d4ff;
 }
 
-.avatar:hover{
-
-transform:scale(1.05);
-
+.name{
+    font-size:28px;
+    font-weight:bold;
+    margin-top:10px;
 }
 
-h1{
-
-margin-top:15px;
-
-font-size:30px;
-
-font-weight:bold;
-
-}
-
-.desc{
-
-margin-top:8px;
-
-color:#bdbdbd;
-
+.bio{
+    color:#aaa;
+    margin-top:5px;
 }
 
 .notice{
+    background:#1c1c1c;
+    border-radius:12px;
+    padding:15px;
+    margin-top:20px;
+}
 
-margin-top:20px;
+.notice h2{
+    font-size:20px;
+    margin-bottom:10px;
+}
 
-padding:14px;
-
-border-radius:15px;
-
-text-align:center;
-
-font-weight:bold;
-
-background:#0077ff;
-
-box-shadow:0 0 15px rgba(0,119,255,.5);
-
-animation:pulse 2s infinite;
-
+.notice p{
+    margin:6px 0;
 }
 
 .search{
-
-width:100%;
-
-margin-top:20px;
-
-padding:14px;
-
-border:none;
-
-outline:none;
-
-border-radius:14px;
-
-background:#1d2635;
-
-color:#fff;
-
-font-size:16px;
-
+    margin:20px 0;
 }
 
-.search::placeholder{
-
-color:#888;
-
+.search input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
 }
 
 .card{
-
-margin-top:25px;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:20px;
-
-padding:15px;
-
-box-shadow:0 0 20px rgba(0,212,255,.15);
-
-transition:.3s;
-
+    background:#1c1c1c;
+    border-radius:12px;
+    margin-bottom:15px;
+    overflow:hidden;
 }
 
-.card:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 30px rgba(0,212,255,.35);
-
+.card summary{
+    list-style:none;
+    cursor:pointer;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
 }
 
-.banner{
-
-width:100%;
-
-aspect-ratio:16/9;
-
-object-fit:cover;
-
-border-radius:15px;
-
-transition:.3s;
-
+.card summary::-webkit-details-marker{
+    display:none;
 }
 
-.banner:hover{
-
-transform:scale(1.02);
-
+.item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 15px;
+    color:#fff;
+    text-decoration:none;
+    border-top:1px solid #333;
 }
 
-.badge{
-
-display:inline-block;
-
-padding:6px 12px;
-
-border-radius:50px;
-
-background:#ff3b30;
-
-font-size:12px;
-
-font-weight:bold;
-
-margin-bottom:10px;
-
+.item:hover{
+    background:#2a2a2a;
 }
 
-.title{
-
-font-size:22px;
-
-font-weight:bold;
-
-margin:15px 0 8px;
-
+.item img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:10px;
 }
-
-.info{
-
-color:#9ca3af;
-
-margin-bottom:15px;
-
-font-size:14px;
-
-}
-
-.row{
-
-display:flex;
-
-gap:10px;
-
-}
-
-.btn{
-
-flex:1;
-
-padding:14px;
-
-border-radius:14px;
-
-text-align:center;
-
-text-decoration:none;
-
-font-weight:bold;
-
-color:#fff;
-
-transition:.3s;
-
-}
-
-.ff{
-
-background:#00b140;
-
-}
-
-.max{
-
-background:#e53935;
-
-}
-
-.btn:hover{
-
-transform:scale(1.05);
-
-}
-
-@keyframes pulse{
-
-0%{box-shadow:0 0 5px #0077ff;}
-
-50%{box-shadow:0 0 20px #00d4ff;}
-
-100%{box-shadow:0 0 5px #0077ff;}
-
-}
-
-@keyframes fadeDown{
-
-from{
-
-opacity:0;
-
-transform:translateY(-30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
 </style>
 
 </head>
-
 <body>
 
 <div class="container">
 
-<!-- PHẦN 2 SẼ DÁN TỪ ĐÂY -->
-
-    <div class="header">
+<div class="header">
 
 <img class="avatar"
-src="https://sf-static.upanhlaylink.com/img/image_2026070746357b39db88760ef5e5101871ab6428.jpg"
-alt="Avatar">
+src="https://via.placeholder.com/150">
 
-<h1>Solite.❤️ X STUDIO MOD</h1>
+<div class="name">
+STUDIO MOD
+</div>
 
-<p class="desc">
-SHARE MOD FREE FIRE
-</p>
+<div class="bio">
+Share Mod Free Fire
+</div>
 
 </div>
 
 <div class="notice">
-🔥 CHÀO MỪNG ĐẾN VỚI STUDIO MOD 🔥
-</div>
 
-<!-- Slider -->
+<h2>📢 Mod mới & Thông báo</h2>
 
-<div class="slider">
-
-<img class="slide active"
-src="https://sf-static.upanhlaylink.com/img/image_20260628fb60a19fa7a75f7b728c0ebe8176d998.jpg">
-
-<img class="slide"
-src="https://sf-static.upanhlaylink.com/img/image_2026070746357b39db88760ef5e5101871ab6428.jpg">
+<p>• Thông báo số 1</p>
+<p>• Thông báo số 2</p>
+<p>• Thông báo số 3</p>
 
 </div>
 
-<style>
-
-.slider{
-
-position:relative;
-
-width:100%;
-
-aspect-ratio:16/9;
-
-margin-top:20px;
-
-border-radius:18px;
-
-overflow:hidden;
-
-box-shadow:0 0 20px rgba(0,212,255,.3);
-
-}
-
-.slide{
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-opacity:0;
-
-transition:opacity 1s;
-
-}
-
-.slide.active{
-
-opacity:1;
-
-}
-
-</style>
+<div class="search">
 
 <input
-class="search"
+id="search"
 type="text"
-placeholder="🔍 Tìm kiếm MOD...">
+placeholder="🔍 Tìm kiếm mod...">
 
-<h2 style="margin-top:25px;margin-bottom:15px;">
-🔥 MOD MỚI NHẤT
-</h2>
-
-<!-- PHẦN 3 SẼ DÁN TỪ ĐÂY -->
-
-    <!-- CARD MOD -->
-
-<div class="card">
-
-<span class="badge">🔥 NEW</span>
-
-<img class="banner"
-src="https://sf-static.upanhlaylink.com/img/image_20260628fb60a19fa7a75f7b728c0ebe8176d998.jpg"
-alt="OB54">
-
-<div class="title">
-OB54 NHÂN VẬT ALOK THỨC TỈNH
 </div>
 
-<div class="info">
-📅 Cập nhật: 07/07/2026
-</div>
+    <!-- MOD 1 -->
+<details class="card">
 
-<div class="row">
+<summary>📂 MOD 1</summary>
 
-<a class="btn ff"
-href="https://link4m.org/nTz8rX"
-target="_blank">
-🟢 FREE FIRE
+<a class="item" href="LINK_1" target="_blank">
+<img src="LINK_ANH_PNG_1">
+<span>M1887</span>
 </a>
 
-<a class="btn max"
-href="https://link4m.net/RxfM0O7"
-target="_blank">
-🔴 FREE FIRE MAX
+<a class="item" href="LINK_2" target="_blank">
+<img src="LINK_ANH_PNG_2">
+<span>SCAR</span>
 </a>
 
-</div>
-
-</div>
-
-<!-- COPY KHỐI CARD TRÊN ĐỂ THÊM MOD MỚI -->
-
-<div class="card">
-
-<span class="badge" style="background:#ff9800;">⭐ HOT</span>
-
-<img class="banner"
-src="https://sf-static.upanhlaylink.com/img/image_2026070746357b39db88760ef5e5101871ab6428.jpg"
-alt="Sắp cập nhật">
-
-<div class="title">
-SẮP CẬP NHẬT MOD MỚI
-</div>
-
-<div class="info">
-📢 Theo dõi STUDIO MOD để nhận bản mới nhất.
-</div>
-
-<div class="row">
-
-<a class="btn ff"
-href="https://youtube.com/@studiomodall?si=nuo8_kb5WE9xyLka"
-target="_blank">
-▶️ YOUTUBE
+<a class="item" href="LINK_3" target="_blank">
+<img src="LINK_ANH_PNG_3">
+<span>MP40</span>
 </a>
 
-<a class="btn max"
-href="https://t.me/studiomodall"
-target="_blank">
-✈️ TELEGRAM
+</details>
+
+<!-- MOD 2 -->
+<details class="card">
+
+<summary>📂 MOD 2</summary>
+
+<a class="item" href="LINK_4" target="_blank">
+<img src="LINK_ANH_PNG_4">
+<span>Gói Trang Phục</span>
 </a>
+
+<a class="item" href="LINK_5" target="_blank">
+<img src="LINK_ANH_PNG_5">
+<span>Hiệu Ứng</span>
+</a>
+
+</details>
+
+<!-- MOD 3 -->
+<details class="card">
+
+<summary>📂 MOD 3</summary>
+
+<a class="item" href="LINK_6" target="_blank">
+<img src="LINK_ANH_PNG_6">
+<span>Mod 1</span>
+</a>
+
+<a class="item" href="LINK_7" target="_blank">
+<img src="LINK_ANH_PNG_7">
+<span>Mod 2</span>
+</a>
+
+</details>
+
+<!-- MOD 4 -->
+<details class="card">
+
+<summary>📂 MOD 4</summary>
+
+<a class="item" href="LINK_8" target="_blank">
+<img src="LINK_ANH_PNG_8">
+<span>Mod 1</span>
+</a>
+
+<a class="item" href="LINK_9" target="_blank">
+<img src="LINK_ANH_PNG_9">
+<span>Mod 2</span>
+</a>
+
+</details>
+
+<!-- MOD 5 -->
+<details class="card">
+
+<summary>📂 MOD 5</summary>
+
+<a class="item" href="LINK_10" target="_blank">
+<img src="LINK_ANH_PNG_10">
+<span>Mod 1</span>
+</a>
+
+<a class="item" href="LINK_11" target="_blank">
+<img src="LINK_ANH_PNG_11">
+<span>Mod 2</span>
+</a>
+
+</details>
+
+    <script>
+const search = document.getElementById("search");
+
+search.addEventListener("keyup", function () {
+    let value = this.value.toLowerCase();
+
+    document.querySelectorAll(".item").forEach(function(item){
+        let text = item.innerText.toLowerCase();
+
+        if(text.indexOf(value) > -1){
+            item.style.display = "flex";
+        }else{
+            item.style.display = "none";
+        }
+    });
+});
+</script>
 
 </div>
 
-</div>
-
-<!-- PHẦN 4 SẼ DÁN TỪ ĐÂY -->
-
-    <hr style="border:1px solid #222;margin:40px 0;">
-
-<h2 style="text-align:center;margin-bottom:20px;">
-🌐 CỘNG ĐỒNG STUDIO MOD
-</h2>
-
-<div class="row">
-
-<a class="btn ff"
-href="https://zalo.me/g/vcyz9cj9awn8divdby2h"
-target="_blank">
-💬 ZALO
-</a>
-
-<a class="btn max"
-href="https://t.me/studiomodall"
-target="_blank">
-✈️ TELEGRAM
-</a>
-
-</div>
-
-<br>
-
-<div class="row">
-
-<a class="btn ff"
-href="https://youtube.com/@studiomodall?si=nuo8_kb5WE9xyLka"
-target="_blank">
-▶️ YOUTUBE
-</a>
-
-<a class="btn max"
-href="https://www.tiktok.com/@thanhkhang1372009?_r=1&_t=ZS-97iFXunuF7K"
-target="_blank">
-🎵 TIKTOK
-</a>
-
-</div>
-
-<br>
-
-<a class="btn"
-style="display:block;background:#ff9800;"
-href="https://shop.honghac86.com/"
-target="_blank">
-🛒 SHOP BÁN MÁY ẢO
-</a>
-
-<div style="margin-top:40px;text-align:center;color:#888;font-size:14px;">
-
-© 2026 Solite.❤️ X STUDIO MOD
-
-<br><br>
-
-❤️ Cảm ơn bạn đã ủng hộ!
-
-</div>
-
-<button id="topBtn">
-⬆
-</button>
-
-<style>
-
-#topBtn{
-
-position:fixed;
-
-right:20px;
-
-bottom:90px;
-
-width:55px;
-
-height:55px;
-
-border:none;
-
-border-radius:50%;
-
-background:#00d4ff;
-
-color:#fff;
-
-font-size:22px;
-
-cursor:pointer;
-
-display:none;
-
-box-shadow:0 0 20px #00d4ff;
-
-transition:.3s;
-
-z-index:999;
-
-}
-
-#topBtn:hover{
-
-transform:scale(1.1);
-
-}
-
-</style>
-
-<!-- PHẦN 5 SẼ DÁN TỪ ĐÂY -->
+</body>
+</html>
+    
