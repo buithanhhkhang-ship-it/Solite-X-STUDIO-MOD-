@@ -1,123 +1,325 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>STUDIO MOD</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    background:#111;
-    color:#fff;
-    padding:20px;
+
+background:#0f1115;
+
+background-image:
+linear-gradient(180deg,#161b22,#0f1115);
+
+color:#fff;
+
 }
 
 .container{
-    max-width:500px;
-    margin:auto;
+
+max-width:500px;
+
+margin:auto;
+
+padding:18px;
+
 }
 
 .header{
-    text-align:center;
-    margin-bottom:20px;
+
+text-align:center;
+
+animation:show .7s;
+
 }
 
 .avatar{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #00d4ff;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:4px solid #00d9ff;
+
+box-shadow:0 0 18px #00d9ff;
+
+transition:.3s;
+
+}
+
+.avatar:hover{
+
+transform:scale(1.05);
+
 }
 
 .name{
-    font-size:28px;
-    font-weight:bold;
-    margin-top:10px;
+
+font-size:30px;
+
+font-weight:700;
+
+margin-top:15px;
+
 }
 
 .bio{
-    color:#aaa;
-    margin-top:5px;
+
+opacity:.8;
+
+margin-top:5px;
+
+font-size:15px;
+
 }
 
 .notice{
-    background:#1c1c1c;
-    border-radius:12px;
-    padding:15px;
-    margin-top:20px;
+
+margin-top:25px;
+
+padding:16px;
+
+background:#1a1f29;
+
+border-radius:18px;
+
+border:1px solid #2d3440;
+
 }
 
 .notice h2{
-    font-size:20px;
-    margin-bottom:10px;
+
+font-size:20px;
+
+margin-bottom:10px;
+
+color:#00d9ff;
+
 }
 
 .notice p{
-    margin:6px 0;
+
+margin-top:7px;
+
+font-size:14px;
+
 }
 
 .search{
-    margin:20px 0;
+
+margin-top:22px;
+
 }
 
 .search input{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
+
+width:100%;
+
+padding:14px;
+
+background:#1b2028;
+
+color:white;
+
+border:none;
+
+border-radius:14px;
+
+outline:none;
+
+font-size:15px;
+
+transition:.3s;
+
 }
 
-.card{
-    background:#1c1c1c;
-    border-radius:12px;
-    margin-bottom:15px;
-    overflow:hidden;
+.search input:focus{
+
+box-shadow:0 0 15px #00d9ff;
+
 }
 
-.card summary{
-    list-style:none;
-    cursor:pointer;
-    padding:15px;
-    font-size:18px;
-    font-weight:bold;
+.mod{
+
+margin-top:22px;
+
+background:#1a1f29;
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid #2f3745;
+
+box-shadow:0 8px 18px rgba(0,0,0,.25);
+
+transition:.3s;
+
 }
 
-.card summary::-webkit-details-marker{
-    display:none;
+.mod:hover{
+
+transform:translateY(-2px);
+
 }
 
-.item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:12px 15px;
-    color:#fff;
-    text-decoration:none;
-    border-top:1px solid #333;
+.banner{
+
+width:100%;
+
+aspect-ratio:16/9;
+
+object-fit:cover;
+
+display:block;
+
+cursor:pointer;
+
 }
 
-.item:hover{
-    background:#2a2a2a;
+.mod-title{
+
+padding:15px;
+
+font-size:20px;
+
+font-weight:600;
+
 }
 
-.item img{
-    width:55px;
-    height:55px;
-    object-fit:cover;
-    border-radius:10px;
+.mod-content{
+
+display:none;
+
+padding:15px;
+
+animation:show .3s;
+
 }
+
+.sub{
+
+background:#252d38;
+
+border-radius:15px;
+
+overflow:hidden;
+
+margin-bottom:15px;
+
+}
+
+.sub img{
+
+width:100%;
+
+aspect-ratio:16/9;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.sub-name{
+
+padding:12px;
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+.links{
+
+display:flex;
+
+gap:10px;
+
+padding:0 12px 12px;
+
+}
+
+.links a{
+
+flex:1;
+
+text-align:center;
+
+padding:11px;
+
+border-radius:10px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.normal{
+
+background:#00b050;
+
+}
+
+.max{
+
+background:#ff3131;
+
+}
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
@@ -125,14 +327,18 @@ body{
 <div class="header">
 
 <img class="avatar"
-src="https://via.placeholder.com/150">
+src="LINK_AVATAR">
 
 <div class="name">
+
 STUDIO MOD
+
 </div>
 
 <div class="bio">
+
 Share Mod Free Fire
+
 </div>
 
 </div>
@@ -141,9 +347,11 @@ Share Mod Free Fire
 
 <h2>📢 Mod mới & Thông báo</h2>
 
-<p>• Thông báo số 1</p>
-<p>• Thông báo số 2</p>
-<p>• Thông báo số 3</p>
+<p>🔥 Chào mừng đến với Studio Mod</p>
+
+<p>📌 Cập nhật mod mỗi ngày</p>
+
+<p>❤️ Cảm ơn bạn đã ủng hộ</p>
 
 </div>
 
@@ -151,121 +359,294 @@ Share Mod Free Fire
 
 <input
 id="search"
-type="text"
 placeholder="🔍 Tìm kiếm mod...">
 
 </div>
 
-    <!-- MOD 1 -->
-<details class="card">
+    <!-- ================= MOD 1 ================= -->
 
-<summary>📂 MOD 1</summary>
+<div class="mod">
 
-<a class="item" href="LINK_1" target="_blank">
-<img src="LINK_ANH_PNG_1">
-<span>M1887</span>
+<img class="banner toggle"
+
+src="LINK_ANH_MOD_1"
+
+alt="MOD 1">
+
+<div class="mod-title">
+
+🔥 MOD SKIN SÚNG
+
+</div>
+
+<div class="mod-content">
+
+<div class="sub">
+
+<img src="LINK_ANH_M1887">
+
+<div class="sub-name">
+
+M1887 EVO
+
+</div>
+
+<div class="links">
+
+<a class="normal"
+
+href="LINK_FF_THUONG_1"
+
+target="_blank">
+
+FF THƯỜNG
+
 </a>
 
-<a class="item" href="LINK_2" target="_blank">
-<img src="LINK_ANH_PNG_2">
-<span>SCAR</span>
+<a class="max"
+
+href="LINK_FF_MAX_1"
+
+target="_blank">
+
+FF MAX
+
 </a>
 
-<a class="item" href="LINK_3" target="_blank">
-<img src="LINK_ANH_PNG_3">
-<span>MP40</span>
+</div>
+
+</div>
+
+<div class="sub">
+
+<img src="LINK_ANH_SCAR">
+
+<div class="sub-name">
+
+SCAR TITAN
+
+</div>
+
+<div class="links">
+
+<a class="normal"
+
+href="LINK_FF_THUONG_2"
+
+target="_blank">
+
+FF THƯỜNG
+
 </a>
 
-</details>
+<a class="max"
 
-<!-- MOD 2 -->
-<details class="card">
+href="LINK_FF_MAX_2"
 
-<summary>📂 MOD 2</summary>
+target="_blank">
 
-<a class="item" href="LINK_4" target="_blank">
-<img src="LINK_ANH_PNG_4">
-<span>Gói Trang Phục</span>
+FF MAX
+
 </a>
 
-<a class="item" href="LINK_5" target="_blank">
-<img src="LINK_ANH_PNG_5">
-<span>Hiệu Ứng</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= MOD 2 ================= -->
+
+<div class="mod">
+
+<img class="banner toggle"
+
+src="LINK_ANH_MOD_2"
+
+alt="MOD 2">
+
+<div class="mod-title">
+
+👕 MOD NHÂN VẬT
+
+</div>
+
+<div class="mod-content">
+
+<div class="sub">
+
+<img src="LINK_ANH_NV1">
+
+<div class="sub-name">
+
+Gói Trang Phục 1
+
+</div>
+
+<div class="links">
+
+<a class="normal"
+
+href="#">
+
+FF THƯỜNG
+
 </a>
 
-</details>
+<a class="max"
 
-<!-- MOD 3 -->
-<details class="card">
+href="#">
 
-<summary>📂 MOD 3</summary>
+FF MAX
 
-<a class="item" href="LINK_6" target="_blank">
-<img src="LINK_ANH_PNG_6">
-<span>Mod 1</span>
 </a>
 
-<a class="item" href="LINK_7" target="_blank">
-<img src="LINK_ANH_PNG_7">
-<span>Mod 2</span>
-</a>
+</div>
 
-</details>
+</div>
 
-<!-- MOD 4 -->
-<details class="card">
+</div>
 
-<summary>📂 MOD 4</summary>
+</div>
 
-<a class="item" href="LINK_8" target="_blank">
-<img src="LINK_ANH_PNG_8">
-<span>Mod 1</span>
-</a>
+<!-- ================= MOD 3 ================= -->
 
-<a class="item" href="LINK_9" target="_blank">
-<img src="LINK_ANH_PNG_9">
-<span>Mod 2</span>
-</a>
+<div class="mod">
 
-</details>
+<img class="banner toggle"
 
-<!-- MOD 5 -->
-<details class="card">
+src="LINK_ANH_MOD_3">
 
-<summary>📂 MOD 5</summary>
+<div class="mod-title">
 
-<a class="item" href="LINK_10" target="_blank">
-<img src="LINK_ANH_PNG_10">
-<span>Mod 1</span>
-</a>
+🚗 MOD XE
 
-<a class="item" href="LINK_11" target="_blank">
-<img src="LINK_ANH_PNG_11">
-<span>Mod 2</span>
-</a>
+</div>
 
-</details>
+<div class="mod-content">
+
+</div>
+
+</div>
+
+<!-- ================= MOD 4 ================= -->
+
+<div class="mod">
+
+<img class="banner toggle"
+
+src="LINK_ANH_MOD_4">
+
+<div class="mod-title">
+
+✨ MOD HIỆU ỨNG
+
+</div>
+
+<div class="mod-content">
+
+</div>
+
+</div>
+
+<!-- ================= MOD
 
     <script>
-const search = document.getElementById("search");
 
-search.addEventListener("keyup", function () {
-    let value = this.value.toLowerCase();
+//==========================
+// CHỈ MỞ 1 MOD
+//==========================
 
-    document.querySelectorAll(".item").forEach(function(item){
-        let text = item.innerText.toLowerCase();
+const banners = document.querySelectorAll(".toggle");
 
-        if(text.indexOf(value) > -1){
-            item.style.display = "flex";
-        }else{
-            item.style.display = "none";
-        }
-    });
+banners.forEach(function(banner){
+
+banner.onclick=function(){
+
+const content=this.parentElement.querySelector(".mod-content");
+
+document.querySelectorAll(".mod-content").forEach(function(item){
+
+if(item!==content){
+
+item.style.display="none";
+
+}
+
 });
+
+if(content.style.display=="block"){
+
+content.style.display="none";
+
+}else{
+
+content.style.display="block";
+
+content.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+};
+
+});
+
+//==========================
+// TÌM KIẾM
+//==========================
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+document.querySelectorAll(".sub").forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+if(text.indexOf(value)>-1){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+//==========================
+// HIỆU ỨNG MƯỢT
+//==========================
+
+document.querySelectorAll(".mod").forEach(function(card){
+
+card.addEventListener("touchstart",function(){
+
+this.style.transform="scale(.98)";
+
+});
+
+card.addEventListener("touchend",function(){
+
+this.style.transform="scale(1)";
+
+});
+
+});
+
 </script>
 
 </div>
 
 </body>
 </html>
-    
