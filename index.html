@@ -82,6 +82,188 @@ snow.remove();
 setInterval(createSnow,500);
 
 </script>
+
+  <!-- POPUP QUẢNG CÁO SHOP -->
+
+<div id="adPopup">
+
+<div class="ad-box">
+
+
+<span class="close" onclick="closeAd()">
+❌
+</span>
+
+
+<img 
+src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg"
+class="ad-img">
+
+
+
+<h2>📢 THÔNG BÁO</h2>
+
+
+<p>
+🔥 SHOP MÁY ẢO UY TÍN<br>
+⚡ Máy mạnh - Giá tốt<br>
+🎮 Hỗ trợ game, treo tool<br>
+🚀 Hoạt động ổn định
+</p>
+
+
+
+<a href="https://shop.honghac86.com">
+🛒 XEM SHOP NGAY
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+<style>
+
+
+#adPopup{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:99999;
+
+}
+
+
+
+.ad-box{
+
+width:85%;
+max-width:400px;
+
+background:#15181d;
+
+padding:18px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:
+0 0 20px #00d5ff;
+
+position:relative;
+
+}
+
+
+
+.ad-img{
+
+width:100%;
+
+aspect-ratio:16/9;
+
+object-fit:cover;
+
+border-radius:15px;
+
+}
+
+
+
+.ad-box h2{
+
+color:#00d5ff;
+
+font-size:24px;
+
+margin:15px 0;
+
+}
+
+
+
+.ad-box p{
+
+color:white;
+
+line-height:1.8;
+
+font-size:15px;
+
+}
+
+
+
+.ad-box a{
+
+display:block;
+
+margin-top:15px;
+
+background:#00c853;
+
+color:white;
+
+padding:13px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+.close{
+
+position:absolute;
+
+right:15px;
+
+top:10px;
+
+font-size:22px;
+
+cursor:pointer;
+
+z-index:2;
+
+}
+
+
+
+</style>
+
+
+
+
+<script>
+
+
+function closeAd(){
+
+document.getElementById("adPopup").style.display="none";
+
+}
+
+
+</script>
   
 <style>
 
