@@ -224,40 +224,104 @@ autoSlide = startSlide();
 
 </html>
 
-<!-- CODE 2 -->
+<!-- CODE 2: MOD ĐỒ -->
 
-<div class="mod-card">
-
-
-<img 
-src="LINK_ẢNH_MOD"
-onclick="openChoice()"
-class="mod-image">
-
+<div class="main-category">
 
 <h2>🔥 MOD ĐỒ</h2>
 
+<img class="banner-img"
+src="LINK_ẢNH_LỚN_MOD_ĐỒ">
+
+
+
+<div class="mod-container">
+
+
+<!-- MOD 1 -->
+
+<div class="mod-card">
+
+<img 
+src="LINK_ẢNH_MOD_1"
+onclick="openChoice('LINK_FF_THUONG_1','LINK_FF_MAX_1')">
+
+<h3>MOD ĐỒ 1</h3>
 
 </div>
 
 
 
-<!-- HỘP CHỌN -->
+<!-- MOD 2 -->
+
+<div class="mod-card">
+
+<img 
+src="LINK_ẢNH_MOD_2"
+onclick="openChoice('LINK_FF_THUONG_2','LINK_FF_MAX_2')">
+
+<h3>MOD ĐỒ 2</h3>
+
+</div>
+
+
+
+<!-- MOD 3 -->
+
+<div class="mod-card">
+
+<img 
+src="LINK_ẢNH_MOD_3"
+onclick="openChoice('LINK_FF_THUONG_3','LINK_FF_MAX_3')">
+
+<h3>MOD ĐỒ 3</h3>
+
+</div>
+
+
+
+<!-- MOD 4 -->
+
+<div class="mod-card">
+
+<img 
+src="LINK_ẢNH_MOD_4"
+onclick="openChoice('LINK_FF_THUONG_4','LINK_FF_MAX_4')">
+
+<h3>MOD ĐỒ 4</h3>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- BẢNG CHỌN PHIÊN BẢN -->
 
 <div id="choiceBox" class="popup">
 
 
 <div class="popup-content">
 
+
+<span class="close" onclick="closeChoice()">
+❌
+</span>
+
+
 <h3>📢 Vui lòng chọn phiên bản</h3>
 
 
-<a href="LINK_FF_THUONG">
+<a id="normalLink">
 🟢 FREE FIRE THƯỜNG
 </a>
 
 
-<a href="LINK_FF_MAX">
+<a id="maxLink">
 🔴 FREE FIRE MAX
 </a>
 
@@ -268,30 +332,88 @@ class="mod-image">
 
 
 
+
+
 <style>
+
+
+/* MỤC LỚN */
+
+.main-category{
+
+margin-top:30px;
+background:#15181d;
+padding:15px;
+border-radius:18px;
+
+}
+
+
+.main-category h2{
+
+color:#00d5ff;
+text-align:center;
+font-size:28px;
+margin-bottom:15px;
+
+}
+
+
+.banner-img{
+
+width:100%;
+aspect-ratio:16/9;
+object-fit:cover;
+border-radius:15px;
+
+}
+
+
+
+/* 2 MỤC / 1 HÀNG */
+
+.mod-container{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:18px;
+
+}
+
 
 
 .mod-card{
 
-background:#1a1d22;
-padding:15px;
+background:#20242b;
+padding:10px;
 border-radius:15px;
 text-align:center;
 
 }
 
 
-.mod-image{
+.mod-card img{
 
 width:100%;
 aspect-ratio:16/9;
 object-fit:cover;
-border-radius:15px;
+border-radius:12px;
 cursor:pointer;
 
 }
 
 
+.mod-card h3{
+
+font-size:15px;
+margin-top:8px;
+
+}
+
+
+
+/* POPUP */
 
 .popup{
 
@@ -304,40 +426,58 @@ height:100%;
 background:rgba(0,0,0,.7);
 align-items:center;
 justify-content:center;
+z-index:99;
 
 }
 
 
+
 .popup-content{
 
+position:relative;
 background:#222;
 padding:25px;
 border-radius:15px;
+width:80%;
 text-align:center;
 
 }
 
 
+
 .popup-content h3{
 
-color:white;
 margin-bottom:20px;
 
 }
+
+
+
+.close{
+
+position:absolute;
+right:15px;
+top:10px;
+font-size:22px;
+cursor:pointer;
+
+}
+
 
 
 .popup-content a{
 
 display:block;
 padding:12px;
-margin:10px;
+margin:10px 0;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
+
 }
 
 
-.popup-content a:first-of-type{
+#normalLink{
 
 background:#00c853;
 color:white;
@@ -345,7 +485,7 @@ color:white;
 }
 
 
-.popup-content a:last-of-type{
+#maxLink{
 
 background:#f44336;
 color:white;
@@ -357,12 +497,31 @@ color:white;
 
 
 
+
 <script>
 
 
-function openChoice(){
+function openChoice(ffthuong,ffmax){
+
 
 document.getElementById("choiceBox").style.display="flex";
+
+
+document.getElementById("normalLink").href=ffthuong;
+
+
+document.getElementById("maxLink").href=ffmax;
+
+
+}
+
+
+
+function closeChoice(){
+
+
+document.getElementById("choiceBox").style.display="none";
+
 
 }
 
