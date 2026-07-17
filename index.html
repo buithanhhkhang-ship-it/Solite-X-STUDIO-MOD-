@@ -226,21 +226,26 @@ autoSlide = startSlide();
 
 <!-- CODE 2: MOD ĐỒ -->
 
-<div class="category">
+<div class="big-category">
 
+
+<!-- MỤC LỚN -->
+
+<div class="category-header">
 
 <h2>🔥 MOD ĐỒ</h2>
 
+<img src="LINK_ẢNH_LỚN_MOD_ĐỒ">
 
-<!-- ẢNH MỤC LỚN -->
+<p>Chia sẻ các loại mod đồ mới nhất</p>
 
-<img class="category-img"
-src="LINK_ẢNH_MOD_ĐỒ">
+</div>
+
 
 
 <!-- MỤC NHỎ 1 -->
 
-<div class="mod-item">
+<div class="mod-box">
 
 <img src="LINK_ẢNH_MOD_1">
 
@@ -249,14 +254,15 @@ src="LINK_ẢNH_MOD_ĐỒ">
 
 <div class="buttons">
 
-<a class="normal" href="LINK_FF_THUONG_1">
+<a href="LINK_FF_THUONG_1" class="ff-normal">
 🟢 FF THƯỜNG
 </a>
 
 
-<a class="max" href="LINK_FF_MAX_1">
+<a href="LINK_FF_MAX_1" class="ff-max">
 🔴 FF MAX
 </a>
+
 
 </div>
 
@@ -266,7 +272,7 @@ src="LINK_ẢNH_MOD_ĐỒ">
 
 <!-- MỤC NHỎ 2 -->
 
-<div class="mod-item">
+<div class="mod-box">
 
 <img src="LINK_ẢNH_MOD_2">
 
@@ -275,14 +281,15 @@ src="LINK_ẢNH_MOD_ĐỒ">
 
 <div class="buttons">
 
-<a class="normal" href="LINK_FF_THUONG_2">
+<a href="LINK_FF_THUONG_2" class="ff-normal">
 🟢 FF THƯỜNG
 </a>
 
 
-<a class="max" href="LINK_FF_MAX_2">
+<a href="LINK_FF_MAX_2" class="ff-max">
 🔴 FF MAX
 </a>
+
 
 </div>
 
@@ -292,7 +299,7 @@ src="LINK_ẢNH_MOD_ĐỒ">
 
 <!-- MỤC NHỎ 3 -->
 
-<div class="mod-item">
+<div class="mod-box">
 
 <img src="LINK_ẢNH_MOD_3">
 
@@ -301,14 +308,15 @@ src="LINK_ẢNH_MOD_ĐỒ">
 
 <div class="buttons">
 
-<a class="normal" href="LINK_FF_THUONG_3">
+<a href="LINK_FF_THUONG_3" class="ff-normal">
 🟢 FF THƯỜNG
 </a>
 
 
-<a class="max" href="LINK_FF_MAX_3">
+<a href="LINK_FF_MAX_3" class="ff-max">
 🔴 FF MAX
 </a>
+
 
 </div>
 
@@ -321,44 +329,63 @@ src="LINK_ẢNH_MOD_ĐỒ">
 
 <style>
 
-.category{
 
-margin-top:30px;
+/* MỤC LỚN */
+
+.big-category{
+
+margin-top:35px;
+background:#15181d;
+padding:18px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,213,255,.25);
 
 }
 
 
-.category h2{
+.category-header h2{
 
-font-size:24px;
+font-size:30px;
 color:#00d5ff;
+text-align:center;
 margin-bottom:15px;
 
 }
 
 
-.category-img{
+.category-header img{
 
 width:100%;
 aspect-ratio:16/9;
 object-fit:cover;
-border-radius:15px;
-margin-bottom:18px;
+border-radius:18px;
 
 }
 
 
-.mod-item{
+.category-header p{
 
-background:#1a1d22;
+text-align:center;
+color:#aaa;
+margin-top:10px;
+
+}
+
+
+
+/* MỤC NHỎ */
+
+.mod-box{
+
+margin-top:22px;
+background:#20242b;
 padding:15px;
-border-radius:15px;
-margin-bottom:18px;
+border-radius:16px;
 
 }
 
 
-.mod-item img{
+.mod-box img{
 
 width:100%;
 aspect-ratio:16/9;
@@ -368,12 +395,16 @@ border-radius:12px;
 }
 
 
-.mod-item h3{
+.mod-box h3{
 
+font-size:20px;
 margin:12px 0;
 
 }
 
+
+
+/* NÚT */
 
 .buttons{
 
@@ -386,8 +417,8 @@ gap:10px;
 .buttons a{
 
 flex:1;
-text-align:center;
 padding:12px;
+text-align:center;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
@@ -395,7 +426,7 @@ font-weight:bold;
 }
 
 
-.normal{
+.ff-normal{
 
 background:#00c853;
 color:white;
@@ -403,11 +434,12 @@ color:white;
 }
 
 
-.max{
+.ff-max{
 
 background:#f44336;
 color:white;
 
 }
+
 
 </style>
