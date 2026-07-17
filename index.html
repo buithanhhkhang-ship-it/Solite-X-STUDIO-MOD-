@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -17,56 +18,6 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-  <script>
-const slider = document.querySelector(".slider");
-
-let autoSlide = setInterval(() => {
-    slider.scrollBy({
-        left: 232,
-        behavior: "smooth"
-    });
-
-    if (
-        slider.scrollLeft + slider.clientWidth >=
-        slider.scrollWidth - 5
-    ) {
-        setTimeout(() => {
-            slider.scrollTo({
-                left: 0,
-                behavior: "smooth"
-            });
-        }, 600);
-    }
-}, 3000);
-
-// Dừng khi người dùng chạm
-slider.addEventListener("touchstart", () => {
-    clearInterval(autoSlide);
-});
-
-// Chạy lại khi thả tay
-slider.addEventListener("touchend", () => {
-    autoSlide = setInterval(() => {
-        slider.scrollBy({
-            left: 232,
-            behavior: "smooth"
-        });
-
-        if (
-            slider.scrollLeft + slider.clientWidth >=
-            slider.scrollWidth - 5
-        ) {
-            setTimeout(() => {
-                slider.scrollTo({
-                    left: 0,
-                    behavior: "smooth"
-                });
-            }, 600);
-        }
-    }, 3000);
-});
-</script>
-  
 body{
 background:#111317;
 color:#fff;
@@ -103,6 +54,7 @@ font-size:15px;
 color:#bdbdbd;
 }
 
+
 .notice{
 margin-top:28px;
 }
@@ -112,6 +64,7 @@ font-size:22px;
 margin-bottom:15px;
 color:#00d5ff;
 }
+
 
 .slider{
 display:flex;
@@ -125,9 +78,11 @@ padding-bottom:8px;
 display:none;
 }
 
+
 .slide{
 flex:0 0 220px;
 }
+
 
 .slide img{
 width:100%;
@@ -139,6 +94,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.35);
 transition:.3s;
 }
 
+
 .slide img:hover{
 transform:scale(1.03);
 }
@@ -147,9 +103,12 @@ transform:scale(1.03);
 
 </head>
 
+
 <body>
 
+
 <div class="container">
+
 
 <div class="header">
 
@@ -162,24 +121,105 @@ src="https://sf-static.upanhlaylink.com/img/image_202607173d84c5337cf3400d46429c
 
 </div>
 
+
+
 <div class="notice">
 
 <h2>📢 MOD MỚI & THÔNG BÁO</h2>
 
+
 <div class="slider">
+
 
 <a class="slide" href="#">
 <img src="https://sf-static.upanhlaylink.com/img/image_20260702ff35c82a08da85a67cbff9f00d243764.jpg">
 </a>
 
+
 <a class="slide" href="#">
 <img src="https://sf-static.upanhlaylink.com/img/image_202607026c2ff1202e495609b5a73697b989193d.jpg">
 </a>
+
 
 <a class="slide" href="#">
 <img src="https://sf-static.upanhlaylink.com/img/image_202607028f0c46366083c38cb88063252a9640bf.jpg">
 </a>
 
+
 </div>
 
 </div>
+
+
+</div>
+
+
+
+<script>
+
+const slider = document.querySelector(".slider");
+
+
+function startSlide(){
+
+return setInterval(()=>{
+
+slider.scrollBy({
+
+left:232,
+
+behavior:"smooth"
+
+});
+
+
+if(
+slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5
+){
+
+setTimeout(()=>{
+
+slider.scrollTo({
+
+left:0,
+
+behavior:"smooth"
+
+});
+
+},600);
+
+}
+
+
+},3000);
+
+}
+
+
+
+let autoSlide = startSlide();
+
+
+
+slider.addEventListener("touchstart",()=>{
+
+clearInterval(autoSlide);
+
+});
+
+
+
+slider.addEventListener("touchend",()=>{
+
+autoSlide = startSlide();
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
