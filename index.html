@@ -9,26 +9,32 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- HIỆU ỨNG TUYẾT RƠI -->
-
-<div id="snow"></div>
+<!-- TUYẾT RƠI PHÁT SÁNG -->
 
 <style>
 
 .snowflake{
+
 position:fixed;
-top:-10px;
-color:white;
-font-size:15px;
+top:-20px;
+color:#fff;
+font-size:14px;
 z-index:9999;
 pointer-events:none;
-animation:fall linear infinite;
+
+text-shadow:
+0 0 5px #fff,
+0 0 10px #00d5ff;
+
+animation:snowFall linear infinite;
+
 }
 
-@keyframes fall{
+
+@keyframes snowFall{
 
 0%{
-transform:translateY(-10px);
+transform:translateY(-20px);
 }
 
 100%{
@@ -50,13 +56,14 @@ snow.className="snowflake";
 
 snow.innerHTML="❄";
 
+
 snow.style.left=Math.random()*100+"vw";
 
-snow.style.animationDuration=(3+Math.random()*5)+"s";
+snow.style.fontSize=(8+Math.random()*12)+"px";
 
-snow.style.opacity=Math.random();
+snow.style.animationDuration=(5+Math.random()*5)+"s";
 
-snow.style.fontSize=(10+Math.random()*20)+"px";
+snow.style.opacity=0.5+Math.random()*0.5;
 
 
 document.body.appendChild(snow);
@@ -66,12 +73,13 @@ setTimeout(()=>{
 
 snow.remove();
 
-},8000);
+},10000);
 
 }
 
 
-setInterval(createSnow,150);
+// Ít tuyết hơn
+setInterval(createSnow,500);
 
 </script>
   
