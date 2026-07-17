@@ -18,6 +18,72 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+  <!-- HIỆU ỨNG TUYẾT RƠI -->
+
+<div id="snow"></div>
+
+<style>
+
+.snowflake{
+position:fixed;
+top:-10px;
+color:white;
+font-size:15px;
+z-index:9999;
+pointer-events:none;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(100vh);
+}
+
+}
+
+</style>
+
+
+<script>
+
+function createSnow(){
+
+let snow=document.createElement("div");
+
+snow.className="snowflake";
+
+snow.innerHTML="❄";
+
+snow.style.left=Math.random()*100+"vw";
+
+snow.style.animationDuration=(3+Math.random()*5)+"s";
+
+snow.style.opacity=Math.random();
+
+snow.style.fontSize=(10+Math.random()*20)+"px";
+
+
+document.body.appendChild(snow);
+
+
+setTimeout(()=>{
+
+snow.remove();
+
+},8000);
+
+}
+
+
+setInterval(createSnow,150);
+
+</script>
+  
 body{
 background:#111317;
 color:#fff;
