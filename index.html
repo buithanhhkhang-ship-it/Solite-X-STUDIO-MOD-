@@ -17,6 +17,56 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+  <script>
+const slider = document.querySelector(".slider");
+
+let autoSlide = setInterval(() => {
+    slider.scrollBy({
+        left: 232,
+        behavior: "smooth"
+    });
+
+    if (
+        slider.scrollLeft + slider.clientWidth >=
+        slider.scrollWidth - 5
+    ) {
+        setTimeout(() => {
+            slider.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
+        }, 600);
+    }
+}, 3000);
+
+// Dừng khi người dùng chạm
+slider.addEventListener("touchstart", () => {
+    clearInterval(autoSlide);
+});
+
+// Chạy lại khi thả tay
+slider.addEventListener("touchend", () => {
+    autoSlide = setInterval(() => {
+        slider.scrollBy({
+            left: 232,
+            behavior: "smooth"
+        });
+
+        if (
+            slider.scrollLeft + slider.clientWidth >=
+            slider.scrollWidth - 5
+        ) {
+            setTimeout(() => {
+                slider.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }, 600);
+        }
+    }, 3000);
+});
+</script>
+  
 body{
 background:#111317;
 color:#fff;
