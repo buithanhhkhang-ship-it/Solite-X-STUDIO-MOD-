@@ -266,37 +266,6 @@ document.getElementById("adPopup").style.display="none";
 </script>
   
 <style>
-
-.search-box{
-margin:20px 0;
-}
-
-#searchInput{
-width:100%;
-padding:14px;
-border:none;
-border-radius:12px;
-background:#1f1f1f;
-color:#fff;
-font-size:16px;
-outline:none;
-}
-
-.search-tags{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin:12px 0 20px;
-}
-
-.search-tags button{
-padding:10px 16px;
-border:none;
-border-radius:20px;
-background:#222;
-color:#fff;
-cursor:pointer;
-}
   
 *{
 margin:0;
@@ -554,21 +523,6 @@ autoSlide = startSlide();
 <div class="mod-container">
 
 
-<div class="search-box">
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Tìm mod..."
-onkeyup="searchMods()">
-</div>
-
-<div class="search-tags">
-
-<button onclick="quickSearch('SÚNG')">🔫 SÚNG</button>
-<button onclick="quickSearch('IGNIS')">🔥 NV IGNIS</button>
-<button onclick="quickSearch('ALOCK')">👤 NV ALOCK</button>
-<button onclick="quickSearch('HÀNH ĐỘNG')">🎮 HÀNH ĐỘNG</button>
-<button onclick="quickSearch('')">❌ TẤT CẢ</button>
 
 </div>
 
@@ -685,8 +639,23 @@ onclick="openChoice('https://link4m.org/pwsVI','NO')">
 
 
 
-<!-- MOD 42 -->
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Tìm mod..."
+onkeyup="searchMods()">
+</div>
 
+<div class="search-tags">
+<button onclick="quickSearch('SÚNG')">🔫 SÚNG</button>
+<button onclick="quickSearch('IGNIS')">🔥 NV IGNIS</button>
+<button onclick="quickSearch('ALOCK')">👤 NV ALOCK</button>
+<button onclick="quickSearch('HÀNH ĐỘNG')">🎮 HÀNH ĐỘNG</button>
+<button onclick="quickSearch('')">❌ TẤT CẢ</button>
+</div>
+
+<!-- MOD 42 -->
 <div class="mod-card">
 
 <img 
@@ -1592,3 +1561,20 @@ color:#111;
 }
 
 </style>
+
+<script>
+function searchMods(){
+let input=document.getElementById("searchInput").value.toLowerCase();
+let cards=document.querySelectorAll(".mod-card");
+
+cards.forEach(card=>{
+let title=card.querySelector("h3").textContent.toLowerCase();
+card.style.display=title.includes(input)?"":"none";
+});
+}
+
+function quickSearch(text){
+document.getElementById("searchInput").value=text;
+searchMods();
+}
+</script>
