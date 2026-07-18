@@ -6,8 +6,28 @@
 <title>STUDIO MOD</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- TUYẾT RƠI PHÁT SÁNG -->
+<!-- ==========================================
+     PHẦN 1: GIAO DIỆN HIỆU ỨNG & THÔNG BÁO WEB
+     ========================================== -->
 <style>
+/* Reset cơ bản */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+body{
+background:#111317;
+color:#fff;
+}
+.container{
+max-width:500px;
+margin:auto;
+padding:18px;
+}
+
+/* Hiệu ứng tuyết rơi phát sáng */
 .snowflake{
 position:fixed;
 top:-20px;
@@ -15,49 +35,15 @@ color:#fff;
 font-size:14px;
 z-index:9999;
 pointer-events:none;
-text-shadow:
-0 0 5px #fff,
-0 0 10px #00d5ff;
+text-shadow: 0 0 5px #fff, 0 0 10px #00d5ff;
 animation:snowFall linear infinite;
 }
 @keyframes snowFall{
 0%{ transform:translateY(-20px); }
 100%{ transform:translateY(100vh); }
 }
-</style>
 
-<script>
-function createSnow(){
-let snow=document.createElement("div");
-snow.className="snowflake";
-snow.innerHTML="❄";
-snow.style.left=Math.random()*100+"vw";
-snow.style.fontSize=(8+Math.random()*12)+"px";
-snow.style.animationDuration=(5+Math.random()*5)+"s";
-snow.style.opacity=0.5+Math.random()*0.5;
-document.body.appendChild(snow);
-setTimeout(()=>{ snow.remove(); },10000);
-}
-setInterval(createSnow,500);
-</script>
-
-<!-- POPUP QUẢNG CÁO SHOP -->
-<div id="adPopup">
-<div class="ad-box">
-<span class="close" onclick="closeAd()">❌</span>
-<img src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg" class="ad-img">
-<h2>📢 THÔNG BÁO</h2>
-<p>
-🔥 SHOP MÁY ẢO UY TÍN<br>
-⚡ Máy mạnh - Giá tốt<br>
-🎮 Hỗ trợ game, treo tool<br>
-🚀 Hoạt động ổn định
-</p>
-<a href="https://shop.honghac86.com">🛒 XEM SHOP NGAY</a>
-</div>
-</div>
-
-<style>
+/* Popup quảng cáo Shop Máy Ảo tự động hiển thị */
 #adPopup{
 position:fixed;
 top:0;
@@ -114,30 +100,8 @@ font-size:22px;
 cursor:pointer;
 z-index:2;
 }
-</style>
 
-<script>
-function closeAd(){
-document.getElementById("adPopup").style.display="none";
-}
-</script>
-  
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-body{
-background:#111317;
-color:#fff;
-}
-.container{
-max-width:500px;
-margin:auto;
-padding:18px;
-}
+/* Đầu trang: Avatar lửa & Tên Studio */
 .header{
 text-align:center;
 margin-top:20px;
@@ -148,10 +112,7 @@ margin-top:20px;
     object-fit:cover;
     border-radius:50%;
     border:3px solid #ff6a00;
-    box-shadow:
-        0 0 10px #ff6a00,
-        0 0 20px #ff3300,
-        0 0 35px #ff0000;
+    box-shadow: 0 0 10px #ff6a00, 0 0 20px #ff3300, 0 0 35px #ff0000;
     animation: fireGlow 1.2s infinite alternate;
 }
 @keyframes fireGlow{
@@ -167,6 +128,8 @@ margin-top:6px;
 font-size:15px;
 color:#bdbdbd;
 }
+
+/* Slider thông báo mới đầu trang */
 .notice{
 margin-top:28px;
 }
@@ -197,39 +160,9 @@ display:block;
 box-shadow:0 5px 15px rgba(0,0,0,.35);
 transition:.3s;
 }
-.slide img:hover{
-transform:scale(1.03);
-}
+.slide img:hover{ transform:scale(1.03); }
 
-/* ÉP CHIA ĐÔI CỘT SẠCH SẼ */
-.mod-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
-}
-.mod-card {
-    background:#20242b;
-    padding:10px;
-    border-radius:15px;
-    text-align:center;
-    box-sizing: border-box !important;
-}
-.mod-card img {
-    width: 100% !important;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 12px !important;
-    cursor: pointer;
-}
-.mod-card h3 {
-    font-size: 13px !important;
-    margin-top: 8px;
-    word-break: break-word;
-}
-
-/* Ô TÌM KIẾM CHUẨN KHUNG */
+/* Thanh tìm kiếm và bộ nút lọc nhanh */
 #searchInput {
     width: 100%;
     padding: 12px 20px;
@@ -270,15 +203,47 @@ transform:scale(1.03);
     color: #111;
     border-color: #00d5ff;
 }
-
-/* TIÊU ĐỀ SECTION */
-.container h2 {
+.container h2.sec-title {
     font-size: 22px;
     margin: 25px 0 15px 0;
     color: #00d5ff;
 }
+</style>
 
-/* POPUP LỰA CHỌN PHIÊN BẢN */
+
+<!-- =======================================================
+     PHẦN 2: THƯ MỤC THÔNG BÁO TẢI FFTH & FFMAX (DANH SÁCH MOD)
+     ======================================================= -->
+<style>
+/* Ép chia đôi lưới mod làm 2 cột sạch sẽ không tràn */
+.mod-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+}
+.mod-card {
+    background:#20242b;
+    padding:10px;
+    border-radius:15px;
+    text-align:center;
+    box-sizing: border-box !important;
+}
+.mod-card img {
+    width: 100% !important;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 12px !important;
+    cursor: pointer;
+}
+.mod-card h3 {
+    font-size: 13px !important;
+    margin-top: 8px;
+    word-break: break-word;
+}
+
+/* Popup lựa chọn tải phiên bản FF Thường hoặc FF Max */
 .popup{
 display:none;
 position:fixed;
@@ -305,8 +270,13 @@ text-align:center;
 .popup-content a{ display:block; padding:12px; margin:10px 0; border-radius:10px; text-decoration:none; font-weight:bold; }
 #normalLink{ background:#00c853; color:white; }
 #maxLink{ background:#f44336; color:white; }
+</style>
 
-/* LIÊN HỆ */
+
+<!-- ==========================================
+     PHẦN 3: THÔNG TIN LIÊN QUAN (LIÊN HỆ)
+     ========================================== -->
+<style>
 .contact{
 margin-top:30px;
 background:#15181d;
@@ -322,17 +292,34 @@ text-align:center;
 
 <body>
 
-<!-- KHỐI CHÍNH BAO BỌC TOÀN BỘ TRANG -->
+<!-- POPUP QUẢNG CÁO WEB TỰ ĐỘNG (THUỘC PHẦN 1) -->
+<div id="adPopup">
+<div class="ad-box">
+<span class="close" onclick="closeAd()">❌</span>
+<img src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg" class="ad-img">
+<h2>📢 THÔNG BÁO</h2>
+<p>
+🔥 SHOP MÁY ẢO UY TÍN<br>
+⚡ Máy mạnh - Giá tốt<br>
+🎮 Hỗ trợ game, treo tool<br>
+🚀 Hoạt động ổn định
+</p>
+<a href="https://shop.honghac86.com">🛒 XEM SHOP NGAY</a>
+</div>
+</div>
+
+<!-- KHỐI CONTAINER CHÍNH BAO BỌC TOÀN BỘ GIAO DIỆN CHUẨN ĐIỆN THOẠI -->
 <div class="container">
 
-  <!-- AVATAR & TÊN -->
+  <!-- ===================================================
+       HIỂN THỊ PHẦN 1: GIAO DIỆN ĐẦU TRANG, SLIDER, TÌM KIẾM
+       =================================================== -->
   <div class="header">
     <img class="avatar" src="https://sf-static.upanhlaylink.com/img/image_202607173d84c5337cf3400d46429c8195c2652a.jpg">
     <h1>STUDIO MOD</h1>
     <p>SHARE MOD SKIN ANTIBAND</p>
   </div>
 
-  <!-- SLIDER THÔNG BÁO -->
   <div class="notice">
     <h2>📢 MOD MỚI & THÔNG BÁO</h2>
     <div class="slider">
@@ -343,7 +330,6 @@ text-align:center;
     </div>
   </div>
 
-  <!-- THANH TÌM KIẾM -->
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="🔍 Tìm mod..." onkeyup="searchMods()">
   </div>
@@ -357,13 +343,15 @@ text-align:center;
     <button onclick="quickSearch('')">⚙️ TẤT CẢ</button>
   </div>
 
-  <!-- VIDEO TRÌNH CHIẾU -->
-  <h2>🔥 MOD VIP OB54</h2>
+  <h2 class="sec-title">🔥 MOD VIP OB54</h2>
   <video loop playsinline controls style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
     <source src="https://www.image2url.com/r2/default/videos/1784258874107-2de016b0-5b1d-4c1c-aed4-48078ec48caf.mp4" type="video/mp4">
   </video>
-    
-  <!-- LƯỚI DANH SÁCH 42 MOD (CHIA 2 CỘT) -->
+
+
+  <!-- ==========================================
+       HIỂN THỊ PHẦN 2: THƯ MỤC TẢI MOD (42 MOD)
+       ========================================== -->
   <div class="mod-grid">
     
     <div class="mod-card">
@@ -583,13 +571,4 @@ text-align:center;
 
     <div class="mod-card">
       <img src="https://sf-static.upanhlaylink.com/img/image_20260709ca49aa78a85f45e0e2f15c30df231eda.jpg" onclick="openChoice('https://link4m.net/9mItOtT','https://link4m.net/WhlLjT86')">
-      <h3>MOD NV ALOCK 7</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_2026070965e5f01608d49a08bd5ee7d3fdb0c1d5.jpg" onclick="openChoice('https://link4m.net/VFnljLt5','https://link4m.org/CiYz4')">
-      <h3>MOD NV ALOCK 6</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260
+      <h
