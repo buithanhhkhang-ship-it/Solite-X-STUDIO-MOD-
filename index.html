@@ -1,172 +1,530 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>STUDIO MOD</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>STUDIO MOD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<!-- ==========================================
-     PHẦN 1: GIAO DIỆN HIỆU ỨNG & THÔNG BÁO WEB
-     ========================================== -->
-<style>
-/* Reset cơ bản */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-body{
-background:#111317;
-color:#fff;
-}
-.container{
-max-width:500px;
-margin:auto;
-padding:18px;
+<!-- POPUP QUẢNG CÁO -->
+<div id="adPopup">
+    <div class="ad-box">
+        <span class="close" onclick="closeAd()">❌</span>
+        <img src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg" class="ad-img">
+        <h2>📢 THÔNG BÁO</h2>
+        <p>
+            🔥 SHOP MÁY ẢO UY TÍN<br>
+            ⚡ Máy mạnh - Giá tốt<br>
+            🎮 Hỗ trợ game, treo tool<br>
+            🚀 Hoạt động ổn định
+        </p>
+        <a href="https://shop.honghac86.com">🛒 XEM SHOP NGAY</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img class="avatar" src="https://sf-static.upanhlaylink.com/img/image_202607173d84c5337cf3400d46429c8195c2652a.jpg" onclick="openChoice('https://link4m.org/95RveoRw','https://link4m.org/9ohAmI')">
+        <h1>STUDIO MOD</h1>
+        <p>SHARE MOD SKIN ANTIBAND</p>
+    </div>
+
+    <!-- NOTICE SLIDER -->
+    <div class="notice">
+        <h2>📢 MOD MỚI & THÔNG BÁO</h2>
+        <div class="slider">
+            <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718e640b969dab4edfa59f70dc7c38d35f7.jpg"></a>
+            <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718a1694fb46ca7d22e955c63edecdd62e5.jpg"></a>
+            <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718b7514d8cee593a051661fde1df0b267d.jpg"></a>
+            <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718f242fe032cf9d0ab4b63df3aab3b36ca.jpg"></a>
+        </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Tìm mod..." onkeyup="searchMods()">
+    </div>
+
+    <div class="search-tags">
+        <button onclick="quickSearch('SUNG')">🔫 SÚNG</button>
+        <button onclick="quickSearch('IGNIS')">🔥 NV IGNIS</button>
+        <button onclick="quickSearch('ALOCK')">👤 NV ALOCK</button>
+        <button onclick="quickSearch('HANH DONG')">💌 HÀNH ĐỘNG</button>
+        <button onclick="quickSearch('APP')">🎮 APP MOD TOOL</button>
+        <button onclick="quickSearch('GENPLAY')">💻 MÁY ẢO</button>
+        <button onclick="quickSearch('')">⚙️ TẤT CẢ</button>
+    </div>
+
+    <!-- VIDEO -->
+    <h2 style="color:#00d5ff; margin:15px 0 10px;">🔥 MOD VIP OB54</h2>
+    <div class="video-wrapper">
+        <video loop playsinline controls style="width:100%;max-width:100%;height:auto;display:block;border-radius:8px;">
+            <source src="https://www.image2url.com/r2/default/videos/1784258874107-2de016b0-5b1d-4c1c-aed4-48078ec48caf.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- MOD GRID -->
+    <div class="mod-grid">
+
+        <!-- MOD APP -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717af5ea5f5ad87ff024e50ecb8551dc38f.jpg" onclick="openChoice('https://link4m.net/2oMI741y','https://link4m.net/2oMI741y')">
+            <h3>APP MOD V9.0</h3>
+        </div>
+
+        <!-- MAY AO -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg" onclick="openChoice('https://shop.honghac86.com/','https://shop.honghac86.com/')">
+            <h3>SHOP MAY AO GENPLAY</h3>
+        </div>
+
+        <!-- MOD SUNG -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260718504c19a2f30b5bbf79b8ba438fafd0b4.jpg" onclick="openChoice('https://link4m.net/ORaiK9rZ','https://link4m.org/6DG7ZpGd')">
+            <h3>MOD SUNG M1887 & MP40</h3>
+        </div>
+
+        <!-- MOD AVATAR -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026071756958aa881a2576dcb0814265cff9451.jpg" onclick="openChoice('https://link4m.org/3Ro9irhC','https://link4m.org/wXJVDW')">
+            <h3>MOD AVATAR</h3>
+        </div>
+
+        <!-- MOD HD -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607180ce25555f17b3e88d649e701838033d0.jpg" onclick="openChoice('https://link4m.net/bKMRhHW','NO')">
+            <h3>MOD HANH DONG 10K💎 [FFTH]</h3>
+        </div>
+
+        <!-- MOD LE -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607173653b0ab40efb0f0c498e25de66c31ed.jpg" onclick="openChoice('https://vuotnhanh.com/POt8','NO')">
+            <h3>MOD MAT TIA CHOP [FFTH]</h3>
+        </div>
+
+        <!-- MOD LE -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717e96c157947662f122867636a28711da7.jpg" onclick="openChoice('https://link4m.org/95X2JxC','NO')">
+            <h3>MOD TOC LANG KHACH TIM [FFTH]</h3>
+        </div>
+
+        <!-- MOD LE -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717445f5d03520e85a16149b1d5b4a2d043.jpg" onclick="openChoice('https://link4m.org/pwsVI','NO')">
+            <h3>MOD TOC LANG KHACH TIM [FFTH]</h3>
+        </div>
+
+        <!-- MOD 42 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607189b19d12826b8374a7ec01e21203d4cfa.jpg" onclick="openChoice('https://link4m.org/EWdMU','https://link4m.net/SfLj9J')">
+            <h3>MOD NV IGNIS 42</h3>
+        </div>
+
+        <!-- MOD 41 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607184dc486f7b99c57117b2e5fdf0242f1d1.jpg" onclick="openChoice('https://link4m.org/hwy2JCq','https://link4m.net/mVCanF')">
+            <h3>MOD NV IGNIS 41</h3>
+        </div>
+
+        <!-- MOD 40 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260718f242fe032cf9d0ab4b63df3aab3b36ca.jpg" onclick="openChoice('https://link4m.net/B7hxl','https://link4m.org/UsJnvzc')">
+            <h3>MOD NV IGNIS 40</h3>
+        </div>
+
+        <!-- MOD 39 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260718e640b969dab4edfa59f70dc7c38d35f7.jpg" onclick="openChoice('https://link4m.org/NcLHDuNg','https://link4m.org/u72wl')">
+            <h3>MOD NV IGNIS 39</h3>
+        </div>
+
+        <!-- MOD 38 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260718a1694fb46ca7d22e955c63edecdd62e5.jpg" onclick="openChoice('https://link4m.org/95RveoRw','https://link4m.org/9ohAmI')">
+            <h3>MOD NV IGNIS 38</h3>
+        </div>
+
+        <!-- MOD 37 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260718b7514d8cee593a051661fde1df0b267d.jpg" onclick="openChoice('https://link4m.net/ba2aZO','https://link4m.net/0do1tKMQ')">
+            <h3>MOD NV IGNIS 37</h3>
+        </div>
+
+        <!-- MOD 36 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717682731d1ace989d67e135a94518a2621.jpg" onclick="openChoice('https://link4m.net/32ICxt','https://link4m.org/R2i6U')">
+            <h3>MOD NV ALOCK 36</h3>
+        </div>
+
+        <!-- MOD 35 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717919d7d2dd0b98a49005489212c93ccc4.jpg" onclick="openChoice('https://link4m.org/FdHSB0e','https://link4m.org/kcDBt')">
+            <h3>MOD NV ALOCK 35</h3>
+        </div>
+
+        <!-- MOD 34 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717f231a06a92900638a555362cabe1853c.jpg" onclick="openChoice('https://link4m.net/O4h7sZM','https://link4m.org/V7OMVREh')">
+            <h3>MOD NV ALOCK 34</h3>
+        </div>
+
+        <!-- MOD 33 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607176a0de26293f1d6c8e00b8cc51b397083.jpg" onclick="openChoice('https://link4m.net/c7ZJz2','https://link4m.org/3lerE')">
+            <h3>MOD NV ALOCK 33</h3>
+        </div>
+
+        <!-- MOD 32 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717ee4ca49cd569a28044f0378971045b69.jpg" onclick="openChoice('https://link4m.net/TafysA','https://link4m.net/Bjbrwn98')">
+            <h3>MOD NV ALOCK 32</h3>
+        </div>
+
+        <!-- MOD 31 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717b174320595db8309604d1af4640e4c95.jpg" onclick="openChoice('https://link4m.org/ZeSj2r4s','https://link4m.org/vy66J')">
+            <h3>MOD NV ALOCK 31</h3>
+        </div>
+
+        <!-- MOD 30 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607174b526ddd2404f9c321836ec7ff8b1aa6.jpg" onclick="openChoice('https://link4m.net/pmoakmdz','https://link4m.net/1oevk')">
+            <h3>MOD NV ALOCK 30</h3>
+        </div>
+
+        <!-- MOD 29 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717459002837093d30e73e0307746565678.jpg" onclick="openChoice('https://link4m.org/rTuu6I8','https://link4m.net/P8sEZQ4R')">
+            <h3>MOD NV ALOCK 29</h3>
+        </div>
+
+        <!-- MOD 28 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607171d6eefe1aa36bb711a067af8c38570ba.jpg" onclick="openChoice('https://link4m.org/IeDRshe2','https://link4m.org/ublvR')">
+            <h3>MOD NV ALOCK 28</h3>
+        </div>
+
+        <!-- MOD 27 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607174213ff0cbc57e7fb34e8b2eef6982e43.jpg" onclick="openChoice('https://link4m.org/z337ZT','https://link4m.org/5BjRIQUN')">
+            <h3>MOD NV ALOCK 27</h3>
+        </div>
+
+        <!-- MOD 26 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717d0fa84078dec82b3b8a254fafe449e7e.jpg" onclick="openChoice('https://link4m.net/w3Nku','https://link4m.net/JZWyqov')">
+            <h3>MOD NV ALOCK 26</h3>
+        </div>
+
+        <!-- MOD 25 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717b2aad97d022ca435fa53765989ee861e.jpg" onclick="openChoice('https://link4m.net/5plNQfN','https://link4m.org/N4X0pwFI')">
+            <h3>MOD NV ALOCK 25</h3>
+        </div>
+
+        <!-- MOD 24 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607177551ddfbc024388bcf880b97aa215a46.jpg" onclick="openChoice('https://link4m.org/ORDzAdg','https://link4m.org/T0wShYr')">
+            <h3>MOD NV ALOCK 24</h3>
+        </div>
+
+        <!-- MOD 23 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717f5b4e10e92835f9679a08e65faaaaa78.jpg" onclick="openChoice('https://link4m.org/TFehn3','https://link4m.org/Krld8yv')">
+            <h3>MOD NV ALOCK 23</h3>
+        </div>
+
+        <!-- MOD 22 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717a1bb1018d5674b05a79893e2abdde326.jpg" onclick="openChoice('https://link4m.net/jB2cZd','https://link4m.org/GvMFoZ')">
+            <h3>MOD NV ALOCK 22</h3>
+        </div>
+
+        <!-- MOD 21 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607170e37935ea22648d8eed7bec68740aeea.jpg" onclick="openChoice('https://link4m.org/ZQkbnYFT','https://link4m.org/SGwIqxb')">
+            <h3>MOD NV ALOCK 21</h3>
+        </div>
+
+        <!-- MOD 20 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607170ab8d2f4e5c33eb1849dd01f3c71a233.jpg" onclick="openChoice('https://link4m.org/sESF1WXY','https://link4m.org/B0uGS8o')">
+            <h3>MOD NV ALOCK 20</h3>
+        </div>
+
+        <!-- MOD 19 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717dd472594570e144399f1065c6c1942bc.jpg" onclick="openChoice('https://link4m.org/aeV0iz1b','https://link4m.org/aeV0iz1b')">
+            <h3>MOD NV SANTINO 19</h3>
+        </div>
+
+        <!-- MOD 18 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717a4859ee6710e612b0b77fdd02185494f.jpg" onclick="openChoice('https://link4m.net/E76qvY','https://link4m.org/kZ2av48e')">
+            <h3>MOD NV IGNIS 18</h3>
+        </div>
+
+        <!-- MOD 17 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607176e04364456eabb7bd565901ada7f9dc9.jpg" onclick="openChoice('https://link4m.net/UxyLA8f','https://link4m.org/0tRH8iI')">
+            <h3>MOD NV IGNIS 17</h3>
+        </div>
+
+        <!-- MOD 16 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717b5acc16ef0bad9243888f3e1a6d55b70.jpg" onclick="openChoice('https://link4m.net/0rxVdQ','https://link4m.org/aMpbip')">
+            <h3>MOD NV IGNIS 16</h3>
+        </div>
+
+        <!-- MOD 15 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260717eece66f33dafbeea0a2063be6d23ea25.jpg" onclick="openChoice('https://link4m.net/UhaROq','https://link4m.org/mwnyIWg')">
+            <h3>MOD NV IGNIS 15</h3>
+        </div>
+
+        <!-- MOD 14 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607179c24f49488a51eba8b2f00852dd5ec1e.jpg" onclick="openChoice('https://link4m.net/4ySgDGw0','https://link4m.org/6DMDQdu')">
+            <h3>MOD NV IGNIS 14</h3>
+        </div>
+
+        <!-- MOD 13 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607085313f6959f9efa93dd82a95635f99bf8.jpg" onclick="openChoice('https://link4m.org/O46LjYBI','https://link4m.net/9wlQwQ17')">
+            <h3>MOD NV ALOCK 13</h3>
+        </div>
+
+        <!-- MOD 12 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260708de9933e7d5e13b63378ae54c969ec223.jpg" onclick="openChoice('https://link4m.org/gLNtIFpx','https://link4m.net/897U377')">
+            <h3>MOD NV ALOCK 12</h3>
+        </div>
+
+        <!-- MOD 11 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607088f00e8c3cf42853eadaa483cba175013.jpg" onclick="openChoice('https://link4m.org/BVt4DHf','https://link4m.net/8widjW')">
+            <h3>MOD NV ALOCK 11</h3>
+        </div>
+
+        <!-- MOD 10 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260709b284f22e81d70138b89b77b2fd2b1368.jpg" onclick="openChoice('https://link4m.net/HIFWfVR','https://link4m.net/6KEnwK')">
+            <h3>MOD NV ALOCK 10</h3>
+        </div>
+
+        <!-- MOD 9 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260709abb5aff8fff33be74b99b46d26ae1696.jpg" onclick="openChoice('https://link4m.org/FOXeakT','https://link4m.org/S6djCVR')">
+            <h3>MOD NV ALOCK 9</h3>
+        </div>
+
+        <!-- MOD 8 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026070936657c74dc545d4c568187d27e901116.jpg" onclick="openChoice('https://link4m.net/ISBRMovq','https://link4m.org/lP1lRkk')">
+            <h3>MOD NV ALOCK 8</h3>
+        </div>
+
+        <!-- MOD 7 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260709ca49aa78a85f45e0e2f15c30df231eda.jpg" onclick="openChoice('https://link4m.net/9mItOtT','https://link4m.net/WhlLjT86')">
+            <h3>MOD NV ALOCK 7</h3>
+        </div>
+
+        <!-- MOD 6 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_2026070965e5f01608d49a08bd5ee7d3fdb0c1d5.jpg" onclick="openChoice('https://link4m.net/VFnljLt5','https://link4m.org/CiYz4')">
+            <h3>MOD NV ALOCK 6</h3>
+        </div>
+
+        <!-- MOD 5 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260709afd2dc908f4f36d7b4b090f31a70015f.jpg" onclick="openChoice('https://link4m.net/PqAnc72b','https://link4m.org/4i7hJ0')">
+            <h3>MOD NV ALOCK 5</h3>
+        </div>
+
+        <!-- MOD 4 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260709d69976489bb0b102d0f587beb7b40db4.jpg" onclick="openChoice('https://link4m.org/4UbMfGcg','https://link4m.org/eo3QS')">
+            <h3>MOD NV ALOCK 4</h3>
+        </div>
+
+        <!-- MOD 3 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260711b1aebdf7563cbcb256e1e7d1b0a9f31f.jpg" onclick="openChoice('https://link4m.org/fGUyKRA','https://link4m.net/iGHVmN')">
+            <h3>MOD NV ALOCK 3</h3>
+        </div>
+
+        <!-- MOD 2 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260711c6ea2cf8e6ab0b949a0cdc76d82a10a3.jpg" onclick="openChoice('https://link4m.org/wO9Rl','https://link4m.net/08eFQ')">
+            <h3>MOD NV ALOCK 2</h3>
+        </div>
+
+        <!-- MOD 1 -->
+        <div class="mod-card">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202607110bff06327d40f5ab3d99a54a4ef17d50.jpg" onclick="openChoice('https://link4m.org/bJoyLPy','https://link4m.org/mciQHRG9')">
+            <h3>MOD NV ALOCK 1</h3>
+        </div>
+
+    </div><!-- END MOD-GRID -->
+
+    <!-- CONTACT -->
+    <div class="contact">
+        <h2>📌 THÔNG TIN LIÊN HỆ</h2>
+        <a href="https://drive.google.com/file/d/1RyUdG81FiIT8EJe_as-H572WaeAZjUw1/view?usp=drivesdk">❤️ HƯỚNG DẪN CÀI FILE MOD</a>
+        <a href="https://youtube.com/@studiomodall?si=rzQDkG1A7Z139qbD">▶️ YOUTUBE</a>
+        <a href="https://www.tiktok.com/@thanhkhang1372009?_r=1&_t=ZS-9869UaUWR56">🎵 TIKTOK</a>
+        <a href="https://zalo.me/0832820239">💬 BÁO LỖI ZALO CÁ NHÂN</a>
+        <a href="https://t.me/ThanhKhang1372009">✈️ BÁO LỖI TELEGRAM CÁ NHÂN</a>
+        <a href="https://t.me/studiomodall">💌 NHÓM MOD TELEGRAM</a>
+        <a href="https://zalo.me/g/vcyz9cj9awn8divdby2h">⚒️ NHÓM MOD ZALO</a>
+    </div>
+
+</div><!-- END CONTAINER -->
+
+<!-- POPUP CHỌN PHIÊN BẢN -->
+<div id="choiceBox" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeChoice()">❌</span>
+        <h3>📢 Vui lòng chọn phiên bản</h3>
+        <a id="normalLink">🟢 FREE FIRE THƯỜNG</a>
+        <a id="maxLink">🔴 FREE FIRE MAX</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+/* ===== SNOWFLAKE ===== */
+.snowflake {
+    position: fixed;
+    top: -20px;
+    color: #fff;
+    font-size: 14px;
+    z-index: 9999;
+    pointer-events: none;
+    text-shadow: 0 0 5px #fff, 0 0 10px #00d5ff;
+    animation: snowFall linear infinite;
 }
 
-/* Hiệu ứng tuyết rơi phát sáng */
-.snowflake{
-position:fixed;
-top:-20px;
-color:#fff;
-font-size:14px;
-z-index:9999;
-pointer-events:none;
-text-shadow: 0 0 5px #fff, 0 0 10px #00d5ff;
-animation:snowFall linear infinite;
-}
-@keyframes snowFall{
-0%{ transform:translateY(-20px); }
-100%{ transform:translateY(100vh); }
+@keyframes snowFall {
+    0% { transform: translateY(-20px); }
+    100% { transform: translateY(100vh); }
 }
 
-/* Popup quảng cáo Shop Máy Ảo tự động hiển thị */
-#adPopup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.75);
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:99999;
-}
-.ad-box{
-width:85%;
-max-width:400px;
-background:#15181d;
-padding:18px;
-border-radius:20px;
-text-align:center;
-box-shadow: 0 0 20px #00d5ff;
-position:relative;
-}
-.ad-img{
-width:100%;
-aspect-ratio:16/9;
-object-fit:cover;
-border-radius:15px;
-}
-.ad-box h2{
-color:#00d5ff;
-font-size:24px;
-margin:15px 0;
-}
-.ad-box p{
-color:white;
-line-height:1.8;
-font-size:15px;
-}
-.ad-box a{
-display:block;
-margin-top:15px;
-background:#00c853;
-color:white;
-padding:13px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-}
-.close{
-position:absolute;
-right:15px;
-top:10px;
-font-size:22px;
-cursor:pointer;
-z-index:2;
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Đầu trang: Avatar lửa & Tên Studio */
-.header{
-text-align:center;
-margin-top:20px;
+body {
+    background: #111317;
+    color: #fff;
 }
-.avatar{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:50%;
-    border:3px solid #ff6a00;
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 18px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff6a00;
     box-shadow: 0 0 10px #ff6a00, 0 0 20px #ff3300, 0 0 35px #ff0000;
     animation: fireGlow 1.2s infinite alternate;
-}
-@keyframes fireGlow{
-    0%{ box-shadow: 0 0 10px #ff6a00, 0 0 20px #ff3300, 0 0 35px #ff0000; }
-    100%{ box-shadow: 0 0 15px #ffd700, 0 0 30px #ff6600, 0 0 50px #ff0000; }
-}
-.header h1{
-margin-top:15px;
-font-size:30px;
-}
-.header p{
-margin-top:6px;
-font-size:15px;
-color:#bdbdbd;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-/* Slider thông báo mới đầu trang */
-.notice{
-margin-top:28px;
+.avatar:hover {
+    transform: scale(1.05);
 }
-.notice h2{
-font-size:22px;
-margin-bottom:15px;
-color:#00d5ff;
-}
-.slider{
-display:flex;
-gap:12px;
-overflow-x:auto;
-scroll-behavior:smooth;
-padding-bottom:8px;
-}
-.slider::-webkit-scrollbar{
-display:none;
-}
-.slide{
-flex:0 0 220px;
-}
-.slide img{
-width:100%;
-aspect-ratio:16/9;
-object-fit:cover;
-border-radius:14px;
-display:block;
-box-shadow:0 5px 15px rgba(0,0,0,.35);
-transition:.3s;
-}
-.slide img:hover{ transform:scale(1.03); }
 
-/* Thanh tìm kiếm và bộ nút lọc nhanh */
+@keyframes fireGlow {
+    0% { box-shadow: 0 0 10px #ff6a00, 0 0 20px #ff3300, 0 0 35px #ff0000; }
+    100% { box-shadow: 0 0 15px #ffd700, 0 0 30px #ff6600, 0 0 50px #ff0000; }
+}
+
+.header h1 {
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.header p {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #bdbdbd;
+}
+
+/* ===== NOTICE SLIDER ===== */
+.notice {
+    margin-top: 28px;
+}
+
+.notice h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #00d5ff;
+}
+
+.slider {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 8px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    flex: 0 0 220px;
+}
+
+.slide img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.slide img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+    margin: 20px 0 10px;
+}
+
 #searchInput {
     width: 100%;
     padding: 12px 20px;
-    margin: 15px 0;
     border: 2px solid #00d5ff;
     border-radius: 25px;
     background-color: #15181d;
@@ -176,399 +534,78 @@ transition:.3s;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 213, 255, 0.2);
 }
+
 #searchInput:focus {
     box-shadow: 0 0 15px rgba(0, 213, 255, 0.6);
     background-color: #1a1e24;
 }
+
 .search-tags {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0 20px;
 }
+
 .search-tags button {
     background: #20242b;
     color: #fff;
     border: 1px solid #3f444e;
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     transition: all 0.2s ease;
 }
+
 .search-tags button:hover {
     background: #00d5ff;
     color: #111;
     border-color: #00d5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 213, 255, 0.4);
 }
-.container h2.sec-title {
-    font-size: 22px;
-    margin: 25px 0 15px 0;
-    color: #00d5ff;
+
+/* ===== VIDEO ===== */
+.video-wrapper {
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
 }
-</style>
 
+.video-wrapper video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background: #000;
+}
 
-<!-- =======================================================
-     PHẦN 2: THƯ MỤC THÔNG BÁO TẢI FFTH & FFMAX (DANH SÁCH MOD)
-     ======================================================= -->
-<style>
-/* Ép chia đôi lưới mod làm 2 cột sạch sẽ không tràn */
+/* ===== MOD GRID - 2 CỘT ===== */
 .mod-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
-    margin-top: 15px !important;
-    width: 100% !important;
-}
-.mod-card {
-    background:#20242b;
-    padding:10px;
-    border-radius:15px;
-    text-align:center;
+    padding: 10px 0 !important;
     box-sizing: border-box !important;
 }
+
+.mod-card {
+    background: #20242b;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
 .mod-card img {
     width: 100% !important;
+    height: auto !important;
     aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 12px !important;
-    cursor: pointer;
-}
-.mod-card h3 {
-    font-size: 13px !important;
-    margin-top: 8px;
-    word-break: break-word;
-}
-
-/* Popup lựa chọn tải phiên bản FF Thường hoặc FF Max */
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.7);
-align-items:center;
-justify-content:center;
-z-index:99;
-}
-.popup-content{
-position:relative;
-background:#222;
-padding:25px;
-border-radius:15px;
-width:80%;
-max-width:350px;
-text-align:center;
-}
-.popup-content h3{ margin-bottom:20px; }
-.popup-content .close{ position:absolute; right:15px; top:10px; font-size:22px; cursor:pointer; }
-.popup-content a{ display:block; padding:12px; margin:10px 0; border-radius:10px; text-decoration:none; font-weight:bold; }
-#normalLink{ background:#00c853; color:white; }
-#maxLink{ background:#f44336; color:white; }
-</style>
-
-
-<!-- ==========================================
-     PHẦN 3: THÔNG TIN LIÊN QUAN (LIÊN HỆ)
-     ========================================== -->
-<style>
-.contact{
-margin-top:30px;
-background:#15181d;
-padding:18px;
-border-radius:18px;
-text-align:center;
-}
-.contact h2{ color:#00d5ff; margin-bottom:15px; }
-.contact a{ display:block; padding:13px; margin:10px 0; background:#20242b; color:white; border-radius:12px; text-decoration:none; font-weight:bold; }
-.contact a:hover{ background:#00d5ff; color:#111; }
-</style>
-</head>
-
-<body>
-
-<!-- POPUP QUẢNG CÁO WEB TỰ ĐỘNG (THUỘC PHẦN 1) -->
-<div id="adPopup">
-<div class="ad-box">
-<span class="close" onclick="closeAd()">❌</span>
-<img src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg" class="ad-img">
-<h2>📢 THÔNG BÁO</h2>
-<p>
-🔥 SHOP MÁY ẢO UY TÍN<br>
-⚡ Máy mạnh - Giá tốt<br>
-🎮 Hỗ trợ game, treo tool<br>
-🚀 Hoạt động ổn định
-</p>
-<a href="https://shop.honghac86.com">🛒 XEM SHOP NGAY</a>
-</div>
-</div>
-
-<!-- KHỐI CONTAINER CHÍNH BAO BỌC TOÀN BỘ GIAO DIỆN CHUẨN ĐIỆN THOẠI -->
-<div class="container">
-
-  <!-- ===================================================
-       HIỂN THỊ PHẦN 1: GIAO DIỆN ĐẦU TRANG, SLIDER, TÌM KIẾM
-       =================================================== -->
-  <div class="header">
-    <img class="avatar" src="https://sf-static.upanhlaylink.com/img/image_202607173d84c5337cf3400d46429c8195c2652a.jpg">
-    <h1>STUDIO MOD</h1>
-    <p>SHARE MOD SKIN ANTIBAND</p>
-  </div>
-
-  <div class="notice">
-    <h2>📢 MOD MỚI & THÔNG BÁO</h2>
-    <div class="slider">
-      <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718e640b969dab4edfa59f70dc7c38d35f7.jpg"></a>
-      <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718a1694fb46ca7d22e955c63edecdd62e5.jpg"></a>
-      <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718b7514d8cee593a051661fde1df0b267d.jpg"></a>
-      <a class="slide" href="#"><img src="https://sf-static.upanhlaylink.com/img/image_20260718f242fe032cf9d0ab4b63df3aab3b36ca.jpg"></a>
-    </div>
-  </div>
-
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Tìm mod..." onkeyup="searchMods()">
-  </div>
-  <div class="search-tags">
-    <button onclick="quickSearch('SUNG')">🔫 SÚNG</button>
-    <button onclick="quickSearch('IGNIS')">🔥 NV IGNIS</button>
-    <button onclick="quickSearch('ALOCK')">👤 NV ALOCK</button>
-    <button onclick="quickSearch('HANH ĐONG')">💌 HÀNH ĐỘNG</button>
-    <button onclick="quickSearch('APP')">🎮 APP MOD TOOL</button>
-    <button onclick="quickSearch('GENPLAY')">💻 MÁY ẢO</button>
-    <button onclick="quickSearch('')">⚙️ TẤT CẢ</button>
-  </div>
-
-  <h2 class="sec-title">🔥 MOD VIP OB54</h2>
-  <video loop playsinline controls style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-    <source src="https://www.image2url.com/r2/default/videos/1784258874107-2de016b0-5b1d-4c1c-aed4-48078ec48caf.mp4" type="video/mp4">
-  </video>
-
-
-  <!-- ==========================================
-       HIỂN THỊ PHẦN 2: THƯ MỤC TẢI MOD (42 MOD)
-       ========================================== -->
-  <div class="mod-grid">
-    
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717af5ea5f5ad87ff024e50ecb8551dc38f.jpg" onclick="openChoice('https://link4m.net/2oMI741y','https://link4m.net/2oMI741y')">
-      <h3>APP MOD V9.0</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_2026071738bdab67c9d4694360162b7f8097b609.jpg" onclick="openChoice('https://shop.honghac86.com/','https://shop.honghac86.com/')">
-      <h3>SHOP MAY AO GENPLAY</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260718504c19a2f30b5bbf79b8ba438fafd0b4.jpg" onclick="openChoice('https://link4m.net/ORaiK9rZ','https://link4m.org/6DG7ZpGd')">
-      <h3>MOD SUNG M1887 & MP40</h3>
-    </div>
-    
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_2026071756958aa881a2576dcb0814265cff9451.jpg" onclick="openChoice('https://link4m.org/3Ro9irhC','https://link4m.org/wXJVDW')">
-      <h3>MOD AVATAR</h3>
-    </div>
-    
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607180ce25555f17b3e88d649e701838033d0.jpg" onclick="openChoice('https://link4m.net/bKMRhHW','NO')">
-      <h3>MOD HANH DONG 10K💎 [FFTH]</h3>
-    </div>
-    
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607173653b0ab40efb0f0c498e25de66c31ed.jpg" onclick="openChoice('https://vuotnhanh.com/POt8','NO')">
-      <h3>MOD MAT TIA CHOP [FFTH]</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717e96c157947662f122867636a28711da7.jpg" onclick="openChoice('https://link4m.org/95X2JxC','NO')">
-      <h3>MOD TOC LANG KHACH TIM [FFTH]</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717445f5d03520e85a16149b1d5b4a2d043.jpg" onclick="openChoice('https://link4m.org/pwsVI','NO')">
-      <h3>MOD TOC LANG KHACH TIM [FFTH]</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607189b19d12826b8374a7ec01e21203d4cfa.jpg" onclick="openChoice('https://link4m.org/EWdMU','https://link4m.net/SfLj9J')">
-      <h3>MOD NV IGNIS 42</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607184dc486f7b99c57117b2e5fdf0242f1d1.jpg" onclick="openChoice('https://link4m.org/hwy2JCq','https://link4m.net/mVCanF')">
-      <h3>MOD NV IGNIS 41</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260718f242fe032cf9d0ab4b63df3aab3b36ca.jpg" onclick="openChoice('https://link4m.net/B7hxl','https://link4m.org/UsJnvzc')">
-      <h3>MOD NV IGNIS 40</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260718e640b969dab4edfa59f70dc7c38d35f7.jpg" onclick="openChoice('https://link4m.org/NcLHDuNg','https://link4m.org/u72wl')">
-      <h3>MOD NV IGNIS 39</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260718a1694fb46ca7d22e955c63edecdd62e5.jpg" onclick="openChoice('https://link4m.org/95RveoRw','https://link4m.org/9ohAmI')">
-      <h3>MOD NV IGNIS 38</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260718b7514d8cee593a051661fde1df0b267d.jpg" onclick="openChoice('https://link4m.net/ba2aZO','https://link4m.net/0do1tKMQ')">
-      <h3>MOD NV IGNIS 37</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717682731d1ace989d67e135a94518a2621.jpg" onclick="openChoice('https://link4m.net/32ICxt','https://link4m.org/R2i6U')">
-      <h3>MOD NV ALOCK 36</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717919d7d2dd0b98a49005489212c93ccc4.jpg" onclick="openChoice('https://link4m.org/FdHSB0e','https://link4m.org/kcDBt')">
-      <h3>MOD NV ALOCK 35</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717f231a06a92900638a555362cabe1853c.jpg" onclick="openChoice('https://link4m.net/O4h7sZM','https://link4m.org/V7OMVREh')">
-      <h3>MOD NV ALOCK 34</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607176a0de26293f1d6c8e00b8cc51b397083.jpg" onclick="openChoice('https://link4m.net/c7ZJz2','https://link4m.org/3lerE')">
-      <h3>MOD NV ALOCK 33</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717ee4ca49cd569a28044f0378971045b69.jpg" onclick="openChoice('https://link4m.net/TafysA','https://link4m.net/Bjbrwn98')">
-      <h3>MOD NV ALOCK 32</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717b174320595db8309604d1af4640e4c95.jpg" onclick="openChoice('https://link4m.org/ZeSj2r4s','https://link4m.org/vy66J')">
-      <h3>MOD NV ALOCK 31</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607174b526ddd2404f9c321836ec7ff8b1aa6.jpg" onclick="openChoice('https://link4m.net/pmoakmdz','https://link4m.net/1oevk')">
-      <h3>MOD NV ALOCK 30</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717459002837093d30e73e0307746565678.jpg" onclick="openChoice('https://link4m.org/rTuu6I8','https://link4m.net/P8sEZQ4R')">
-      <h3>MOD NV ALOCK 29</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607171d6eefe1aa36bb711a067af8c38570ba.jpg" onclick="openChoice('https://link4m.org/IeDRshe2','https://link4m.org/ublvR')">
-      <h3>MOD NV ALOCK 28</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607174213ff0cbc57e7fb34e8b2eef6982e43.jpg" onclick="openChoice('https://link4m.org/z337ZT','https://link4m.org/5BjRIQUN')">
-      <h3>MOD NV ALOCK 27</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717d0fa84078dec82b3b8a254fafe449e7e.jpg" onclick="openChoice('https://link4m.net/w3Nku','https://link4m.net/JZWyqov')">
-      <h3>MOD NV ALOCK 26</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717b2aad97d022ca435fa53765989ee861e.jpg" onclick="openChoice('https://link4m.net/5plNQfN','https://link4m.org/N4X0pwFI')">
-      <h3>MOD NV ALOCK 25</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607177551ddfbc024388bcf880b97aa215a46.jpg" onclick="openChoice('https://link4m.org/ORDzAdg','https://link4m.org/T0wShYr')">
-      <h3>MOD NV ALOCK 24</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717f5b4e10e92835f9679a08e65faaaaa78.jpg" onclick="openChoice('https://link4m.org/TFehn3','https://link4m.org/Krld8yv')">
-      <h3>MOD NV ALOCK 23</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717a1bb1018d5674b05a79893e2abdde326.jpg" onclick="openChoice('https://link4m.net/jB2cZd','https://link4m.org/GvMFoZ')">
-      <h3>MOD NV ALOCK 22</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607170e37935ea22648d8eed7bec68740aeea.jpg" onclick="openChoice('https://link4m.org/ZQkbnYFT','https://link4m.org/SGwIqxb')">
-      <h3>MOD NV ALOCK 21</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607170ab8d2f4e5c33eb1849dd01f3c71a233.jpg" onclick="openChoice('https://link4m.org/sESF1WXY','https://link4m.org/B0uGS8o')">
-      <h3>MOD NV ALOCK 20</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717dd472594570e144399f1065c6c1942bc.jpg" onclick="openChoice('https://link4m.org/aeV0iz1b','https://link4m.org/aeV0iz1b')">
-      <h3>MOD NV SANTINO 19</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717a4859ee6710e612b0b77fdd02185494f.jpg" onclick="openChoice('https://link4m.net/E76qvY','https://link4m.org/kZ2av48e')">
-      <h3>MOD NV IGNIS 18</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607176e04364456eabb7bd565901ada7f9dc9.jpg" onclick="openChoice('https://link4m.net/UxyLA8f','https://link4m.org/0tRH8iI')">
-      <h3>MOD NV IGNIS 17</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717b5acc16ef0bad9243888f3e1a6d55b70.jpg" onclick="openChoice('https://link4m.net/0rxVdQ','https://link4m.org/aMpbip')">
-      <h3>MOD NV IGNIS 16</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260717eece66f33dafbeea0a2063be6d23ea25.jpg" onclick="openChoice('https://link4m.net/UhaROq','https://link4m.org/mwnyIWg')">
-      <h3>MOD NV IGNIS 15</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607179c24f49488a51eba8b2f00852dd5ec1e.jpg" onclick="openChoice('https://link4m.net/4ySgDGw0','https://link4m.org/6DMDQdu')">
-      <h3>MOD NV IGNIS 14</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607085313f6959f9efa93dd82a95635f99bf8.jpg" onclick="openChoice('https://link4m.org/O46LjYBI','https://link4m.net/9wlQwQ17')">
-      <h3>MOD NV ALOCK 13</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260708de9933e7d5e13b63378ae54c969ec223.jpg" onclick="openChoice('https://link4m.org/gLNtIFpx','https://link4m.net/897U377')">
-      <h3>MOD NV ALOCK 12</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_202607088f00e8c3cf42853eadaa483cba175013.jpg" onclick="openChoice('https://link4m.org/BVt4DHf','https://link4m.net/8widjW')">
-      <h3>MOD NV ALOCK 11</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260709b284f22e81d70138b89b77b2fd2b1368.jpg" onclick="openChoice('https://link4m.net/HIFWfVR','https://link4m.net/6KEnwK')">
-      <h3>MOD NV ALOCK 10</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260709abb5aff8fff33be74b99b46d26ae1696.jpg" onclick="openChoice('https://link4m.org/FOXeakT','https://link4m.org/S6djCVR')">
-      <h3>MOD NV ALOCK 9</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_2026070936657c74dc545d4c568187d27e901116.jpg" onclick="openChoice('https://link4m.net/ISBRMovq','https://link4m.org/lP1lRkk')">
-      <h3>MOD NV ALOCK 8</h3>
-    </div>
-
-    <div class="mod-card">
-      <img src="https://sf-static.upanhlaylink.com/img/image_20260709ca49aa78a85f45e0e2f15c30df231eda.jpg" onclick="openChoice('https://link4m.net/9mItOtT','https://link4m.net/WhlLjT86')">
-      <h
+    object-fit;
