@@ -1519,8 +1519,63 @@ document.getElementById("choiceBox").style.display="none";
 </div>
 
 
-
 <style>
+
+/* Làm đẹp ô tìm kiếm */
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    margin: 15px auto;
+    display: block;
+    border: 2px solid #00d5ff;
+    border-radius: 25px;
+    background-color: #15181d;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.2);
+}
+
+/* Hiệu ứng khi bấm vào ô tìm kiếm */
+#searchInput:focus {
+    box-shadow: 0 0 15px rgba(0, 213, 255, 0.6);
+    background-color: #1a1e24;
+}
+
+/* Làm đẹp các nút tìm nhanh */
+.quick-search-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.quick-search-buttons button, 
+button[onclick^="quickSearch"] {
+    background: #20242b;
+    color: #fff;
+    border: 1px solid #3f444e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+/* Hiệu ứng khi chỉ chuột/bấm vào nút */
+button[onclick^="quickSearch"]:hover {
+    background: #00d5ff;
+    color: #111;
+    border-color: #00d5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 213, 255, 0.4);
+}
+
 
 .contact{
 
