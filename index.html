@@ -1522,6 +1522,31 @@ document.getElementById("choiceBox").style.display="none";
 
 <style>
 
+/* Ép chia danh sách làm 2 cột bằng nhau */
+.mod-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+}
+
+/* Ép các thẻ mod vừa khít vào cột */
+.mod-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Đảm bảo hình ảnh mod không bị tràn, tự động co giãn theo khung */
+.mod-card img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+}
+
+
 /* Làm đẹp ô tìm kiếm */
 #searchInput {
     width: 100%;
