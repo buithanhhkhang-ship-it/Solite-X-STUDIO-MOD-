@@ -56,10 +56,13 @@
             max-width: 500px;
             margin: auto;
             padding: 18px;
-        }
         .header {
-            text-align: center;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
             margin-top: 20px;
+            width: 100% !important;
         }
         .avatar {
             width: 120px;
@@ -67,9 +70,12 @@
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #ff6a00;
+            display: block !important;
+            margin: 0 auto !important;
             box-shadow: 0 0 10px #ff6a00, 0 0 20px #ff3300, 0 0 35px #ff0000;
             animation: fireGlow 1.2s infinite alternate;
         }
+            
         @keyframes fireGlow {
             0% { box-shadow: 0 0 10px #ff6a00, 0 0 20px #ff3300, 0 0 35px #ff0000; }
             100% { box-shadow: 0 0 15px #ffd700, 0 0 30px #ff6600, 0 0 50px #ff0000; }
@@ -226,15 +232,42 @@
         #maxLink { background: #f44336; color: white; }
 
         /* THÔNG TIN LIÊN HỆ */
-        .contact {
-            margin-top: 30px; background: #15181d; padding: 18px; border-radius: 18px; text-align: center;
+                .contact {
+            margin: 30px auto 10px auto !important;
+            background: #15181d; 
+            padding: 18px; 
+            border-radius: 18px; 
+            text-align: center;
+            box-sizing: border-box !important;
+            width: 100% !important;
         }
-        .contact h2 { color: #00d5ff; margin-bottom: 15px; }
-        .contact a { display: block; padding: 13px; margin: 10px 0; background: #20242b; color: white; border-radius: 12px; text-decoration: none; font-weight: bold; }
-        .contact a:hover { background: #00d5ff; color: #111; }
+        .contact h2 { 
+            color: #00d5ff; 
+            margin-bottom: 15px; 
+            font-size: 22px;
+            text-align: center;
+        }
+        .contact a { 
+            display: block; 
+            padding: 13px 15px; 
+            margin: 10px auto !important;
+            background: #20242b; 
+            color: white; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-align: center;
+            box-sizing: border-box !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            transition: all 0.2s ease;
+        }
+        .contact a:hover { 
+            background: #00d5ff; 
+            color: #111; 
+        }
+        
     </style>
-</head>
-<body>
 
     <!-- POPUP QUẢNG CÁO SHOP -->
     <div id="adPopup">
