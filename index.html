@@ -584,6 +584,43 @@ to{transform:translateY(105vh);}
 
     <!-- MÃ LOGIC JAVASCRIPT CHẠY TÍNH NĂNG -->
     <script>
+
+                           /* PHẦN CHỮ CẬP NHẬT TỰ GHI */
+.update-status {
+    background: rgba(0, 213, 255, 0.1);
+    border: 1px dashed #00d5ff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.2);
+}
+.update-status span {
+    color: #ff6a00;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff6a00;
+} });
+        }
+        function quickSearch(text){
+            document.getElementById("searchInput").value=text;
+            searchMods();
+        }
+    
+function createSnow(){
+ const s=document.createElement('div');
+ s.className='snowflake';
+ s.innerHTML='❄';
+ s.style.left=Math.random()*100+'vw';
+ s.style.animationDuration=(6+Math.random()*6)+'s';
+ s.style.opacity=0.5+Math.random()*0.5;
+ document.body.appendChild(s);
+ setTimeout(()=>s.remove(),12000);
+}
+setInterval(createSnow,900);
+
         // Snow effect removed for performance
 
         // Chạy slider quảng cáo nhỏ
@@ -622,44 +659,7 @@ to{transform:translateY(105vh);}
             cards.forEach(card=>{
                 let title=card.querySelector("h3").textContent.toLowerCase();
                 card.style.display=title.includes(input)?"":"none";
-            });
-        }
-        function quickSearch(text){
-            document.getElementById("searchInput").value=text;
-            searchMods();
-        }
-    
-function createSnow(){
- const s=document.createElement('div');
- s.className='snowflake';
- s.innerHTML='❄';
- s.style.left=Math.random()*100+'vw';
- s.style.animationDuration=(6+Math.random()*6)+'s';
- s.style.opacity=0.5+Math.random()*0.5;
- document.body.appendChild(s);
- setTimeout(()=>s.remove(),12000);
-}
-setInterval(createSnow,900);
 
-        /* PHẦN CHỮ CẬP NHẬT TỰ GHI */
-.update-status {
-    background: rgba(0, 213, 255, 0.1);
-    border: 1px dashed #00d5ff;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    margin: 15px 0;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(0, 213, 255, 0.2);
-}
-.update-status span {
-    color: #ff6a00;
-    font-weight: bold;
-    text-shadow: 0 0 5px #ff6a00;
-}
-        
 </script>
 </body>
 </html>
