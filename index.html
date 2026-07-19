@@ -314,6 +314,11 @@ to{transform:translateY(105vh);}
             <button onclick="quickSearch('')">⚙️ TẤT CẢ</button>
         </div>
 
+        <!-- DÒNG THÔNG BÁO THỜI GIAN CẬP NHẬT (TỰ SỬA BẰNG TAY) -->
+<div class="update-status">
+    ⚡ Trạng thái: <span>Vừa cập nhật 36 giây trước - Ngày 19 / 7</span>
+</div>
+
         <h2>🔥 MOD VIP OB54</h2>
         <video loop playsinline controls style="width: 100%; height: auto; display: block; border-radius: 8px; margin-bottom: 15px;">
             <source src="https://files.catbox.moe/01l4lj.mp4" type="video/mp4">
@@ -636,6 +641,25 @@ function createSnow(){
 }
 setInterval(createSnow,900);
 
+        /* PHẦN CHỮ CẬP NHẬT TỰ GHI */
+.update-status {
+    background: rgba(0, 213, 255, 0.1);
+    border: 1px dashed #00d5ff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.2);
+}
+.update-status span {
+    color: #ff6a00;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff6a00;
+}
+        
 </script>
 </body>
 </html>
