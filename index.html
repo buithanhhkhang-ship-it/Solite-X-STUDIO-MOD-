@@ -644,7 +644,7 @@
         function createSnow(){
             const s=document.createElement('div');
             s.className='snowflake';
-            s.innerHTML='✨';
+            s.innerHTML='✨    🌟';
             s.style.left=Math.random()*100+'vw';
             s.style.animationDuration=(6+Math.random()*6)+'s';
             s.style.opacity=0.5+Math.random()*0.5;
@@ -652,19 +652,7 @@
             setTimeout(()=>s.remove(),12000);
         }
         setInterval(createSnow,900);
-                // Tuyết rơi
-        function createSnow(){
-            const s=document.createElement('div');
-            s.className='snowflake';
-            s.innerHTML='🌟';
-            s.style.left=Math.random()*100+'vw';
-            s.style.animationDuration=(6+Math.random()*6)+'s';
-            s.style.opacity=0.5+Math.random()*0.5;
-            document.body.appendChild(s);
-            setTimeout(()=>s.remove(),12000);
-        }
-        setInterval(createSnow,900);
-
+  
         // Chạy slider quảng cáo nhỏ
         const slider = document.querySelector(".slider");
         function startSlide(){
