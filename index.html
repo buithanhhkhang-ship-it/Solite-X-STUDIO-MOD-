@@ -294,6 +294,10 @@
             <h2>CLICK VÔ ẢNH ĐỂ XEM MOD NEW 👇🏻👇🏻👇🏻</h2>
             <div class="slider">
 <a class="slide" href="javascript:void(0)"
+   onclick="chooseAction('https://youtu.be/mZoa86v4RmE?si=OPyryNHmDNBAYHQ1')">
+    <img src="https://sf-static.upanhlaylink.com/img/image_202607212c3ed2dee7605975dc43e5f1effca4a5.jpg">
+</a>
+<a class="slide" href="javascript:void(0)"
    onclick="chooseAction('https://youtu.be/3WiZwrfWhaI?si=U9hkh-pSfcO_MlwD')">
     <img src="https://sf-static.upanhlaylink.com/img/image_202607219cbea186661471d66e8746922648217c.jpg">
 </a>
@@ -324,10 +328,10 @@
 
         <!-- DÒNG THÔNG BÁO THỜI GIAN CẬP NHẬT (TỰ SỬA BẰNG TAY) -->
         <div class="update-status">
-            ⚡ Cập Nhật New  <span> 08.49 Giờ Ngày 21 Tháng 7</span>
+            ⚡ Cập Nhật New  <span> 20.43 Giờ Ngày 21 Tháng 7</span>
         </div>
 
-        <h2>🔥 MOD VIP OB54</h2>
+        <h2>🔥 MOD SKIN VIP PRO OB54</h2>
         <video loop playsinline controls style="width: 100%; height: auto; display: block; border-radius: 8px; margin-bottom: 15px;">
             <source src="https://www.image2url.com/r2/default/videos/1784552410532-9c272f81-ff04-4eb3-9eb0-d50a2ac8b8db.mp4" type="video/mp4">
         </video>
@@ -641,6 +645,18 @@
             const s=document.createElement('div');
             s.className='snowflake';
             s.innerHTML='✨';
+            s.style.left=Math.random()*100+'vw';
+            s.style.animationDuration=(6+Math.random()*6)+'s';
+            s.style.opacity=0.5+Math.random()*0.5;
+            document.body.appendChild(s);
+            setTimeout(()=>s.remove(),12000);
+        }
+        setInterval(createSnow,900);
+                // Tuyết rơi
+        function createSnow(){
+            const s=document.createElement('div');
+            s.className='snowflake';
+            s.innerHTML='🌟';
             s.style.left=Math.random()*100+'vw';
             s.style.animationDuration=(6+Math.random()*6)+'s';
             s.style.opacity=0.5+Math.random()*0.5;
