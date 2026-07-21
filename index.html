@@ -690,12 +690,11 @@
         function chooseAction(videoUrl) {
     if (confirm("Bạn muốn xem video trên YouTube?\n\nOK = Xem YouTube\nHủy = Xem mục MOD")) {
         window.open(videoUrl, "_blank");
-    else {
-    quickSearch('ALOCK');
-    document.getElementById("searchInput").scrollIntoView({
-        behavior: "smooth"
-    });
-    }
+    } else {
+        quickSearch('ALOCK');
+        document.getElementById("searchInput").scrollIntoView({
+            behavior: "smooth"
+        });
     }
         }
     </script>
