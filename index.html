@@ -332,7 +332,7 @@
             <source src="https://www.image2url.com/r2/default/videos/1784552410532-9c272f81-ff04-4eb3-9eb0-d50a2ac8b8db.mp4" type="video/mp4">
         </video>
 
-        <div class="mod-grid">
+        <div id="modSection" class="mod-grid">
             <div class="mod-card">
                 <img src="https://sf-static.upanhlaylink.com/img/image_20260717af5ea5f5ad87ff024e50ecb8551dc38f.jpg" onclick="openChoice('https://link4m.net/2oMI741y','https://link4m.net/2oMI741y')">
                 <h3>APP MOD V9.0</h3>
@@ -686,6 +686,15 @@
         function quickSearch(text){
             document.getElementById("searchInput").value=text;
             searchMods();
+        }
+        function chooseAction(videoUrl) {
+    if (confirm("Bạn muốn xem video trên YouTube?\n\nOK = Xem YouTube\nHủy = Xem mục MOD")) {
+        window.open(videoUrl, "_blank");
+    } else {
+        document.querySelector(".mod-grid").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
         }
     </script>
 </body>
