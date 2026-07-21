@@ -693,17 +693,22 @@
     } else {
         quickSearch('ALOCK');
 
-setTimeout(() => {
-    document.querySelector(".mod-card").scrollIntoView({
-        behavior: "smooth"
-    });
+        setTimeout(() => {
+            document.querySelector(".mod-card").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
 
-    setTimeout(() => {
-        window.scrollBy({
-            top: 300
-        });
-    }, 500);
-}, 300);
+            setTimeout(() => {
+                window.scrollBy({
+                    top: 300,
+                    behavior: "smooth"
+                });
+            }, 500);
+
+        }, 300);
+    }
+        }
     </script>
 </body>
 </html>
