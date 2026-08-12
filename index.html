@@ -37,29 +37,29 @@
             object-fit: cover;
             border-radius: 16px;
             display: block;
-            border: 2px solid #9b59b6;
+            border: 2px solid #7c3aed;
         }
         .avatar {
             width: 120px;
             height: 120px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid #9b59b6;
+            border: 3px solid #7c3aed;
             display: block !important;
             margin: -60px auto 0 !important;
             position: relative;
             z-index: 2;
-            box-shadow: 0 0 30px rgba(155, 89, 182, 0.5);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.5), 0 0 60px rgba(56, 189, 248, 0.2);
             animation: avatarGlow 2s ease-in-out infinite alternate;
         }
         @keyframes avatarGlow {
-            from { box-shadow: 0 0 20px rgba(155, 89, 182, 0.3); }
-            to { box-shadow: 0 0 50px rgba(155, 89, 182, 0.8); }
+            from { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
+            to { box-shadow: 0 0 50px rgba(56, 189, 248, 0.5), 0 0 30px rgba(124, 58, 237, 0.5); }
         }
         .header h1 {
             margin-top: 15px;
             font-size: 30px;
-            background: linear-gradient(135deg, #9b59b6, #e74c8b);
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -67,7 +67,7 @@
         .header p {
             margin-top: 6px;
             font-size: 15px;
-            color: #b8a0c4;
+            color: #a78bfa;
         }
         .notice {
             margin-top: 28px;
@@ -75,8 +75,8 @@
         .notice h2 {
             font-size: 22px;
             margin-bottom: 15px;
-            color: #9b59b6;
-            text-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+            color: #7c3aed;
+            text-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
         }
         .slider {
             display: flex;
@@ -97,34 +97,34 @@
             object-fit: cover;
             border-radius: 14px;
             display: block;
-            box-shadow: 0 5px 15px rgba(155, 89, 182, 0.35);
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.35);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             border: 2px solid transparent;
         }
         .slide img:hover {
             transform: scale(1.03);
-            box-shadow: 0 5px 25px rgba(155, 89, 182, 0.6);
-            border-color: #9b59b6;
+            box-shadow: 0 5px 25px rgba(56, 189, 248, 0.5);
+            border-color: #38bdf8;
         }
         #searchInput {
             width: 100%;
             padding: 12px 20px;
             margin: 15px auto;
             display: block;
-            border: 2px solid #9b59b6;
+            border: 2px solid #7c3aed;
             border-radius: 25px;
             background-color: #1a142b;
             color: #fff;
             font-size: 16px;
             outline: none;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(155, 89, 182, 0.2);
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.2);
         }
         #searchInput:focus {
-            box-shadow: 0 0 25px rgba(155, 89, 182, 0.6);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.5), 0 0 15px rgba(124, 58, 237, 0.3);
             background-color: #221a33;
-            border-color: #e74c8b;
+            border-color: #38bdf8;
         }
         .search-tags {
             display: flex;
@@ -135,8 +135,8 @@
         }
         .search-tags button {
             background: #1a142b;
-            color: #d4c4e0;
-            border: 1px solid #9b59b6;
+            color: #c4b5fd;
+            border: 1px solid #7c3aed;
             padding: 8px 16px;
             border-radius: 20px;
             cursor: pointer;
@@ -145,11 +145,11 @@
             transition: all 0.2s ease;
         }
         .search-tags button:hover {
-            background: linear-gradient(135deg, #9b59b6, #e74c8b);
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
             color: #fff;
-            border-color: #e74c8b;
+            border-color: #38bdf8;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
         }
         .mod-grid {
             display: grid !important;
@@ -174,8 +174,8 @@
             transition: all 0.3s ease;
         }
         .mod-card:hover {
-            border-color: #9b59b6;
-            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.2);
+            border-color: #7c3aed;
+            box-shadow: 0 5px 20px rgba(56, 189, 248, 0.15), 0 5px 20px rgba(124, 58, 237, 0.15);
             transform: translateY(-3px);
         }
         .mod-card img {
@@ -189,8 +189,8 @@
         }
         .mod-card img:hover {
             transform: scale(1.02);
-            border-color: #9b59b6;
-            box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+            border-color: #38bdf8;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
         }
         .mod-card h3 {
             font-size: 14px;
@@ -199,22 +199,7 @@
             overflow: hidden;
             min-height: 30px;
             text-overflow: ellipsis;
-            color: #d4c4e0;
-        }
-        .ai-badge {
-            font-size: 10px;
-            background: linear-gradient(135deg, #9b59b6, #e74c8b);
-            color: #fff;
-            padding: 2px 10px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 5px;
-            animation: pulseBadge 1.5s ease-in-out infinite;
-            font-weight: 600;
-        }
-        @keyframes pulseBadge {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(0.95); }
+            color: #c4b5fd;
         }
         #adPopup {
             position: fixed;
@@ -229,17 +214,17 @@
         .ad-box {
             width: 85%; max-width: 400px;
             background: #1a142b; padding: 18px; border-radius: 20px;
-            text-align: center; box-shadow: 0 0 40px rgba(155, 89, 182, 0.4);
+            text-align: center; box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
             position: relative;
-            border: 1px solid #9b59b6;
+            border: 1px solid #7c3aed;
         }
         .ad-img { width: 100%; object-fit: contain; border-radius: 12px; height: auto; }
-        .ad-box h2 { color: #9b59b6; font-size: 24px; margin: 15px 0; }
-        .ad-box p { color: #d4c4e0; line-height: 1.8; font-size: 15px; }
+        .ad-box h2 { color: #7c3aed; font-size: 24px; margin: 15px 0; }
+        .ad-box p { color: #c4b5fd; line-height: 1.8; font-size: 15px; }
         .ad-box a {
             display: block;
             margin-top: 15px;
-            background: linear-gradient(135deg, #9b59b6, #e74c8b);
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
             color: white;
             padding: 13px;
             border-radius: 12px;
@@ -249,7 +234,7 @@
         }
         .ad-box a:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(155, 89, 182, 0.5);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
         }
         .close {
             position: absolute;
@@ -259,11 +244,11 @@
             cursor: pointer;
             z-index: 2;
             transition: transform 0.2s ease;
-            color: #d4c4e0;
+            color: #c4b5fd;
         }
         .close:hover {
             transform: rotate(90deg);
-            color: #e74c8b;
+            color: #38bdf8;
         }
         .popup {
             display: none;
@@ -285,8 +270,8 @@
             max-width: 400px;
             text-align: center;
             animation: popupIn 0.3s ease;
-            border: 1px solid #9b59b6;
-            box-shadow: 0 0 40px rgba(155, 89, 182, 0.3);
+            border: 1px solid #7c3aed;
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
         }
         @keyframes popupIn {
             from { transform: scale(0.8) rotate(-5deg); opacity: 0; }
@@ -294,7 +279,7 @@
         }
         .popup-content h3 {
             margin-bottom: 20px;
-            color: #9b59b6;
+            color: #7c3aed;
         }
         .popup-content a {
             display: block;
@@ -308,8 +293,8 @@
         .popup-content a:hover {
             transform: scale(1.02);
         }
-        #normalLink { background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; }
-        #maxLink { background: linear-gradient(135deg, #e74c8b, #c0392b); color: white; }
+        #normalLink { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; }
+        #maxLink { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: white; }
         #modPreviewPopup {
             display: none;
             position: fixed;
@@ -329,8 +314,8 @@
             padding: 15px;
             border-radius: 18px;
             text-align: center;
-            box-shadow: 0 0 40px rgba(155, 89, 182, 0.5);
-            border: 1px solid #9b59b6;
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.3), 0 0 20px rgba(124, 58, 237, 0.2);
+            border: 1px solid #7c3aed;
             animation: popupIn 0.3s ease;
         }
         .mod-preview-img {
@@ -340,10 +325,10 @@
             border-radius: 13px;
             display: block;
             margin-bottom: 15px;
-            border: 2px solid #9b59b6;
+            border: 2px solid #7c3aed;
         }
         .mod-preview-box h3 {
-            color: #9b59b6;
+            color: #7c3aed;
             font-size: 18px;
             margin-bottom: 12px;
         }
@@ -362,10 +347,10 @@
         }
         .mod-preview-btn:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
         }
-        .mod-preview-normal { background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; }
-        .mod-preview-max { background: linear-gradient(135deg, #e74c8b, #c0392b); color: white; }
+        .mod-preview-normal { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; }
+        .mod-preview-max { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: white; }
         .mod-preview-close {
             position: absolute;
             right: 12px;
@@ -373,11 +358,11 @@
             font-size: 22px;
             cursor: pointer;
             z-index: 2;
-            color: #d4c4e0;
+            color: #c4b5fd;
             transition: color 0.2s ease;
         }
         .mod-preview-close:hover {
-            color: #e74c8b;
+            color: #38bdf8;
         }
         .contact {
             margin: 30px auto 10px auto !important;
@@ -390,7 +375,7 @@
             border: 1px solid #2a1f3d;
         }
         .contact h2 {
-            color: #9b59b6;
+            color: #7c3aed;
             margin-bottom: 15px;
             font-size: 22px;
         }
@@ -399,7 +384,7 @@
             padding: 13px 15px;
             margin: 10px auto !important;
             background: #2a1f3d;
-            color: #d4c4e0;
+            color: #c4b5fd;
             border-radius: 12px;
             text-decoration: none;
             font-weight: bold;
@@ -410,11 +395,11 @@
             border: 1px solid transparent;
         }
         .contact a:hover {
-            background: linear-gradient(135deg, #9b59b6, #e74c8b);
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(155, 89, 182, 0.3);
-            border-color: #9b59b6;
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+            border-color: #38bdf8;
         }
         .snowflake {
             position: fixed;
@@ -422,7 +407,7 @@
             font-size: 14px;
             pointer-events: none;
             z-index: 9999;
-            text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6, 0 0 18px #e74c8b;
+            text-shadow: 0 0 5px #7c3aed, 0 0 10px #38bdf8, 0 0 18px #7c3aed;
             animation: snowFall linear forwards;
         }
         @keyframes snowFall {
@@ -430,31 +415,31 @@
             to { transform: translateY(105vh) rotate(720deg) scale(0.3); }
         }
         .update-status {
-            background: rgba(155, 89, 182, 0.1);
-            border: 1px dashed #9b59b6;
+            background: rgba(124, 58, 237, 0.08);
+            border: 1px dashed #7c3aed;
             padding: 10px;
             border-radius: 10px;
             text-align: center;
             font-size: 14px;
             font-weight: 500;
             margin: 15px 0;
-            color: #d4c4e0;
-            box-shadow: 0 0 20px rgba(155, 89, 182, 0.15);
+            color: #c4b5fd;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
         }
         .update-status span {
-            color: #e74c8b;
+            color: #38bdf8;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(231, 76, 139, 0.5);
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
         }
         #noResultMsg {
             grid-column: 1 / -1;
             text-align: center;
             padding: 30px;
-            color: #e74c8b;
+            color: #38bdf8;
             font-size: 18px;
             background: #1a142b;
             border-radius: 15px;
-            border: 2px dashed #9b59b6;
+            border: 2px dashed #7c3aed;
         }
         .video-mod {
             width: 100%;
@@ -462,7 +447,7 @@
             display: block;
             border-radius: 8px;
             margin-bottom: 15px;
-            border: 2px solid #9b59b6;
+            border: 2px solid #7c3aed;
         }
         .ai-header {
             display: flex;
@@ -475,17 +460,17 @@
             display: inline-block;
             width: 12px;
             height: 12px;
-            background: #9b59b6;
+            background: #7c3aed;
             border-radius: 50%;
             animation: aiPulse 1.2s ease-in-out infinite;
-            box-shadow: 0 0 20px rgba(155, 89, 182, 0.6);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
         }
         @keyframes aiPulse {
-            0%, 100% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 10px rgba(155, 89, 182, 0.3); }
-            50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 30px rgba(155, 89, 182, 0.8); }
+            0%, 100% { transform: scale(0.8); opacity: 0.5; box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); }
+            50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 30px rgba(56, 189, 248, 0.8); }
         }
         .ai-chip {
-            background: linear-gradient(135deg, #9b59b6, #e74c8b);
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
             padding: 4px 14px;
             border-radius: 20px;
             font-size: 11px;
@@ -502,16 +487,34 @@
             50% { background-position: 100% 50%; }
         }
         .ai-suggestion {
-            color: #b8a0c4;
+            color: #a78bfa;
             font-size: 12px;
             padding: 8px 12px;
-            background: rgba(155, 89, 182, 0.08);
+            background: rgba(124, 58, 237, 0.08);
             border-radius: 10px;
-            border-left: 3px solid #9b59b6;
+            border-left: 3px solid #38bdf8;
             margin: 8px 0;
         }
         .ai-suggestion strong {
-            color: #9b59b6;
+            color: #38bdf8;
+        }
+        .section-title {
+            color: #7c3aed;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0 10px 0;
+        }
+        .section-title .ai-pulse-small {
+            width: 8px;
+            height: 8px;
+            background: #38bdf8;
+            border-radius: 50%;
+            display: inline-block;
+            animation: aiPulse 1.2s ease-in-out infinite;
+        }
+        .gradient-border {
+            border-image: linear-gradient(135deg, #7c3aed, #38bdf8) 1;
         }
     </style>
 </head>
@@ -620,16 +623,16 @@
     </div>
 
     <div class="update-status">
-        ⚡ Cập Nhật New <span>13.40 Giờ Ngày 08 Tháng 8</span>
+        ⚡ Cập Nhật New <span>21.10 Giờ Ngày 12 Tháng 8</span>
         <br>
-        <span style="font-size: 12px; color: #9b59b6;">🤖 AI đang phân tích dữ liệu mod...</span>
+        <span style="font-size: 12px; color: #a78bfa;">🤖 AI đang phân tích dữ liệu mod...</span>
     </div>
 
-    <h2 style="color: #9b59b6; display: flex; align-items: center; gap: 10px;">
-        <span class="ai-pulse" style="width: 10px; height: 10px;"></span>
+    <div class="section-title">
+        <span class="ai-pulse-small"></span>
         NEW UPDATE MOD ANDROID V3.2
         <span class="ai-chip" style="font-size: 10px;">AI RECOMMENDED</span>
-    </h2>
+    </div>
     <video class="video-mod" loop playsinline controls>
         <source src="https://www.image2url.com/r2/default/videos/1785221126935-3438a31e-ab0a-4b0b-a2b7-dd7e6da3ccbe.mp4" type="video/mp4">
     </video>
@@ -639,7 +642,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717af5ea5f5ad87ff024e50ecb8551dc38f.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/x8js7m1k', 'https://link4m.org/x8js7m1k')">
             <h3>APP MOD V11.0</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 2 -->
         <div class="mod-card">
@@ -650,7 +652,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607180ce25555f17b3e88d649e701838033d0.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/bKMRhHW', 'NO')">
             <h3>MOD HANH DONG SANH FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 4 -->
         <div class="mod-card">
@@ -661,7 +662,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260720606f65daf5111a7da813d5b57b421430.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/rv0bMcIE', 'NO')">
             <h3>MOD HANH DONG SANH FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 6 -->
         <div class="mod-card">
@@ -672,7 +672,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026071855164366362a2d5b3e8b04a7c11b0898.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/Mi4tHTKA', 'https://link4m.org/55n8ij')">
             <h3>MOD BOM KEO</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 8 -->
         <div class="mod-card">
@@ -683,7 +682,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607262a9b89b5d51d3b17e7fe5d32d5c6cef2.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/nQ9Vsw', 'https://link4m.net/atqdGG7')">
             <h3>MOD SUNG TROGUN & AWM</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 10 -->
         <div class="mod-card">
@@ -694,7 +692,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260720a297c072829037b4b6b118baa76b5044.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/C25QM', 'NO')">
             <h3>MOD SUNG AK47 & M4A1 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 12 -->
         <div class="mod-card">
@@ -705,7 +702,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260720f03f0dad62524b7ca417f4fc752ff096.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/YN6b5', 'NO')">
             <h3>MOD SUNG AC80 & M4A1 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 14 -->
         <div class="mod-card">
@@ -716,7 +712,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260719836a9098a53c0930a7314b63afbd05c1.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/TBMCs2z', 'NO')">
             <h3>MOD SUNG CHIM GO KIEN & AWM FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 16 -->
         <div class="mod-card">
@@ -727,7 +722,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026071756958aa881a2576dcb0814265cff9451.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/3Ro9irhC', 'https://link4m.org/wXJVDW')">
             <h3>MOD LE AVATAR</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -738,7 +732,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260727a148141c2697ed0599c9e1435580b291.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/LSrZX6', 'https://link4m.org/4dqgsaM')">
             <h3>MOD LE DAU NEON</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 19 -->
         <div class="mod-card">
@@ -749,7 +742,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260727b2fdcb02729b5b3ac83571a7e77fe5e4.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/ytJeV', 'https://link4m.org/uzLynj2')">
             <h3>MOD LE AO BLUE LOCK</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 21 -->
         <div class="mod-card">
@@ -760,7 +752,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260726c7cf61747d04b3a6b298f4696b25a96e.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/4wFYC4xb', 'NO')">
             <h3>MOD LE GOI DO FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 23 -->
         <div class="mod-card">
@@ -771,7 +762,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607173653b0ab40efb0f0c498e25de66c31ed.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://vuotnhanh.com/POt8', 'NO')">
             <h3>MOD LE MAT TIA CHOP FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 25 -->
         <div class="mod-card">
@@ -782,7 +772,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717e96c157947662f122867636a28711da7.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/95X2JxC', 'NO')">
             <h3>MOD LE TOC LANG KHACH TIM FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 27 -->
         <div class="mod-card">
@@ -793,7 +782,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260808a63802910627e9662db89102e50f5a93.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/V5MjL', 'https://link4m.net/tvl8jw')">
             <h3>MOD NV ALOCK 88</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -804,7 +792,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260803660da4d957bfbd18db2275766dbf0c73.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4sub.com/3kdVVXuA7S', 'https://link4sub.com/nCfAtq5ipD')">
             <h3>MOD NV ALOCK 86</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -815,7 +802,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260803c3d6bcb3496fff355cfb6e4aa30cf6f4.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/WPC2Od', 'https://link4m.org/h67ZQd')">
             <h3>MOD NV ALOCK 84</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -826,7 +812,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260731f262fcf3143d1d84d5ad52e6a5bf8cd8.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/WJeWW', 'https://link4m.net/Jc4yV')">
             <h3>MOD NV ALOCK 82</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -837,7 +822,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260730c3eab6e3a68949aef544cf58c69f5958.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/fbxCh', 'https://link4m.org/cKvoLZ')">
             <h3>MOD NV ALOCK 80</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -848,7 +832,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260730b9e4d7137bd55e791bc3666894fa493b.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/qD739', 'https://link4m.org/lBsJm')">
             <h3>MOD NV ALOCK 78</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -859,20 +842,18 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026073063bd3076927dd0041ef152f44d6eca70.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/e6EuG5L', 'NO')">
             <h3>MOD NV ALOCK 76 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607309184597a86c34f75ffbd67f695544b6c.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/IIvSXJnu', 'https://link4m.net/LBDUp2')">
             <h3>MOD NV ALOCK 75</h3>
         </div>
-        <!-- MOD 28 -->
+                <!-- MOD 28 -->
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260729c6487048c97244a0be81be030ecf9779.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/V5MjL', 'https://link4m.net/tvl8jw')">
             <h3>MOD NV ALOCK 74</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
-        <!-- MOD 28 -->
+                <!-- MOD 28 -->
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026072917c6f3b356346c6ec6e037d8cb0e60ea.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/hT23SKkE', 'https://link4m.net/4fbRs')">
             <h3>MOD NV ALOCK 73</h3>
@@ -881,7 +862,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607299c78c20f44f1ee954d17a55c805ce558.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/gDsAo', 'https://link4m.org/V1oTeW')">
             <h3>MOD NV ALOCK 72</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -892,7 +872,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260729fd0b69711002c6982f99a19bbec29e05.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/hAodv', 'https://link4m.org/vZrm3c')">
             <h3>MOD NV ALOCK 70</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 28 -->
         <div class="mod-card">
@@ -903,7 +882,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260727799457973a33488c98bd154c36e8d1a5.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/aHsTmWo', 'https://link4m.org/KZ7IcGJ')">
             <h3>MOD NV KAPELLA 68</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 29 -->
         <div class="mod-card">
@@ -914,7 +892,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026072625d7c4b9d8dcd9d565918206b268611e.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/VL0vGXS', 'https://link4m.net/59oOfJ')">
             <h3>MOD NV IGNIS 66</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 31 -->
         <div class="mod-card">
@@ -925,7 +902,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260726048e3a7d6630894e4b87d10bf82a87c5.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/A2sTtF', 'https://link4m.org/EIIClpwG')">
             <h3>MOD NV IGNIS 64</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 33 -->
         <div class="mod-card">
@@ -936,7 +912,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026072601e49aba8547dc04cc7cab2e03cd5134.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/f8xFRTi', 'https://link4m.org/vfgTN1')">
             <h3>MOD NV IGNIS 62</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 35 -->
         <div class="mod-card">
@@ -947,7 +922,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260726e1376d981015113c29d476ae4969b4b4.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/g6J37', 'NO')">
             <h3>MOD NV ALOCK 60 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 37 -->
         <div class="mod-card">
@@ -958,7 +932,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260725a2347cc18744e45c697c2f22a4ea3c6f.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/4JxLW', 'https://link4m.org/tBrkcxD')">
             <h3>MOD NV ALOCK 58</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 39 -->
         <div class="mod-card">
@@ -969,7 +942,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026072403b20e219443f8c9555563affeb6f6e3.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/2UF07J', 'NO')">
             <h3>MOD NV ALOCK & M1887 56 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 41 -->
         <div class="mod-card">
@@ -980,7 +952,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607245a01ffeb30c99f3eaa38611d2e2ff5d9.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/BSUze', 'https://link4m.org/nNvXS')">
             <h3>MOD NV ALOCK 54</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 43 -->
         <div class="mod-card">
@@ -991,7 +962,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607248b851a9ff20cf9fd3b044f4723f7b34c.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/kPc6i4Ri', 'https://link4m.org/02JsII')">
             <h3>MOD NV ALOCK 52</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 45 -->
         <div class="mod-card">
@@ -1002,7 +972,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026072415d84c20dbd5ffbc5feb0032f955d75f.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/nTz8rX', 'https://link4m.net/RxfM0O7')">
             <h3>MOD NV IGNIS 50</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 47 -->
         <div class="mod-card">
@@ -1013,7 +982,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607201f713e2e502859a75c58fcf9cb70d613.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/UItfKZxY', 'NO')">
             <h3>MOD NV ORION RONALDO 48 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 49 -->
         <div class="mod-card">
@@ -1024,7 +992,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260720a0aa8e4385df644f503652d9493967a6.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/obl0Hn', 'https://link4m.org/xirgR')">
             <h3>MOD NV IGNIS 46</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 51 -->
         <div class="mod-card">
@@ -1035,7 +1002,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260719dd497e25d00f3ad76ca7e1bf0e1dbfb1.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/mYbEEac', 'NO')">
             <h3>MOD NV IGNIS 44 FFTH</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 53 -->
         <div class="mod-card">
@@ -1046,7 +1012,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607189b19d12826b8374a7ec01e21203d4cfa.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/EWdMU', 'https://link4m.net/SfLj9J')">
             <h3>MOD NV IGNIS 42</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 55 -->
         <div class="mod-card">
@@ -1057,7 +1022,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260718f242fe032cf9d0ab4b63df3aab3b36ca.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/B7hxl', 'https://link4m.org/UsJnvzc')">
             <h3>MOD NV IGNIS 40</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 57 -->
         <div class="mod-card">
@@ -1068,7 +1032,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026071820893cab187c14be63581e536be988b3.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/95RveoRw', 'https://link4m.org/9ohAmI')">
             <h3>MOD NV IGNIS 38</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 59 -->
         <div class="mod-card">
@@ -1079,7 +1042,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717682731d1ace989d67e135a94518a2621.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/32ICxt', 'https://link4m.org/R2i6U')">
             <h3>MOD NV ALOCK 36</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 61 -->
         <div class="mod-card">
@@ -1090,7 +1052,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717f231a06a92900638a555362cabe1853c.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/O4h7sZM', 'https://link4m.org/V7OMVREh')">
             <h3>MOD NV ALOCK 34</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 63 -->
         <div class="mod-card">
@@ -1101,7 +1062,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717ee4ca49cd569a28044f0378971045b69.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/TafysA', 'https://link4m.net/Bjbrwn98')">
             <h3>MOD NV ALOCK 32</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 65 -->
         <div class="mod-card">
@@ -1112,7 +1072,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607174b526ddd2404f9c321836ec7ff8b1aa6.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/pmoakmdz', 'https://link4m.net/1oevk')">
             <h3>MOD NV ALOCK 30</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 67 -->
         <div class="mod-card">
@@ -1123,7 +1082,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607171d6eefe1aa36bb711a067af8c38570ba.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/IeDRshe2', 'https://link4m.org/ublvR')">
             <h3>MOD NV ALOCK 28</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 69 -->
         <div class="mod-card">
@@ -1134,7 +1092,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717d0fa84078dec82b3b8a254fafe449e7e.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/w3Nku', 'https://link4m.net/JZWyqov')">
             <h3>MOD NV ALOCK 26</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 71 -->
         <div class="mod-card">
@@ -1145,7 +1102,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607177551ddfbc024388bcf880b97aa215a46.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/xK9ba6t', 'https://link4m.net/dZGzbP')">
             <h3>MOD NV ALOCK 24</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 73 -->
         <div class="mod-card">
@@ -1156,7 +1112,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717a1bb1018d5674b05a79893e2abdde326.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/jB2cZd', 'https://link4m.org/GvMFoZ')">
             <h3>MOD NV ALOCK 22</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 75 -->
         <div class="mod-card">
@@ -1167,7 +1122,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607170ab8d2f4e5c33eb1849dd01f3c71a233.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/sESF1WXY', 'https://link4m.org/B0uGS8o')">
             <h3>MOD NV ALOCK 20</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 77 -->
         <div class="mod-card">
@@ -1178,7 +1132,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717a4859ee6710e612b0b77fdd02185494f.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/E76qvY', 'https://link4m.org/kZ2av48e')">
             <h3>MOD NV IGNIS 18</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 79 -->
         <div class="mod-card">
@@ -1189,7 +1142,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260717b5acc16ef0bad9243888f3e1a6d55b70.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/0rxVdQ', 'https://link4m.org/aMpbip')">
             <h3>MOD NV IGNIS 16</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 81 -->
         <div class="mod-card">
@@ -1200,7 +1152,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_202607179c24f49488a51eba8b2f00852dd5ec1e.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/4ySgDGw0', 'https://link4m.org/6DMDQdu')">
             <h3>MOD NV IGNIS 14</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 83 -->
         <div class="mod-card">
@@ -1211,7 +1162,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260708de9933e7d5e13b63378ae54c969ec223.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/gLNtIFpx', 'https://link4m.net/897U377')">
             <h3>MOD NV ALOCK 12</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 85 -->
         <div class="mod-card">
@@ -1222,7 +1172,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260709b284f22e81d70138b89b77b2fd2b1368.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/HIFWfVR', 'https://link4m.net/6KEnwK')">
             <h3>MOD NV ALOCK 10</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 87 -->
         <div class="mod-card">
@@ -1233,7 +1182,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026070936657c74dc545d4c568187d27e901116.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/ISBRMovq', 'https://link4m.org/lP1lRkk')">
             <h3>MOD NV ALOCK 8</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 89 -->
         <div class="mod-card">
@@ -1244,7 +1192,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_2026070965e5f01608d49a08bd5ee7d3fdb0c1d5.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.net/VFnljLt5', 'https://link4m.org/CiYz4')">
             <h3>MOD NV ALOCK 6</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 91 -->
         <div class="mod-card">
@@ -1255,7 +1202,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260709d69976489bb0b102d0f587beb7b40db4.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/4UbMfGcg', 'https://link4m.org/eo3QS')">
             <h3>MOD NV ALOCK 4</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 93 -->
         <div class="mod-card">
@@ -1266,7 +1212,6 @@
         <div class="mod-card">
             <img src="https://sf-static.upanhlaylink.com/img/image_20260711c6ea2cf8e6ab0b949a0cdc76d82a10a3.jpg" onclick="openModPreview(this.src, this.parentElement.querySelector('h3').textContent, 'https://link4m.org/wO9Rl', 'https://link4m.net/08eFQ')">
             <h3>MOD NV ALOCK 2</h3>
-            <span class="ai-badge">🤖 AI</span>
         </div>
         <!-- MOD 95 -->
         <div class="mod-card">
@@ -1308,7 +1253,7 @@
 </div>
 
 <script>
-    // Tạo hiệu ứng tuyết với màu tím
+    // Tạo hiệu ứng tuyết với màu tím + xanh dương
     function createSnow() {
         const s = document.createElement('div');
         s.className = 'snowflake';
@@ -1364,7 +1309,7 @@
         document.getElementById("choiceBox").style.display = "none";
     }
 
-    // Hàm tìm kiếm với AI - tự động đề xuất từ khóa
+    // Hàm tìm kiếm với AI - gợi ý thông minh
     function searchMods() {
         let input = document.getElementById("searchInput").value.toLowerCase().trim();
         let cards = document.querySelectorAll(".mod-card");
@@ -1428,10 +1373,10 @@
             if (!existingMsg) {
                 let msg = document.createElement("div");
                 msg.id = "noResultMsg";
-                msg.innerHTML = "🔍 Không tìm thấy mod nào cho từ khóa: <strong>" + input + "</strong><br><span style='font-size:14px;color:#9b59b6;'>🤖 AI gợi ý: Hãy thử tìm với từ khóa khác như SUNG, ALOCK, IGNIS</span>";
+                msg.innerHTML = "🔍 Không tìm thấy mod nào cho từ khóa: <strong>" + input + "</strong><br><span style='font-size:14px;color:#38bdf8;'>🤖 AI gợi ý: Hãy thử tìm với từ khóa khác như SUNG, ALOCK, IGNIS</span>";
                 modSection.appendChild(msg);
             } else {
-                existingMsg.innerHTML = "🔍 Không tìm thấy mod nào cho từ khóa: <strong>" + input + "</strong><br><span style='font-size:14px;color:#9b59b6;'>🤖 AI gợi ý: Hãy thử tìm với từ khóa khác như SUNG, ALOCK, IGNIS</span>";
+                existingMsg.innerHTML = "🔍 Không tìm thấy mod nào cho từ khóa: <strong>" + input + "</strong><br><span style='font-size:14px;color:#38bdf8;'>🤖 AI gợi ý: Hãy thử tìm với từ khóa khác như SUNG, ALOCK, IGNIS</span>";
             }
         } else {
             if (existingMsg) existingMsg.remove();
